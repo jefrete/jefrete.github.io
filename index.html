@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1521747116042-5a810fda9664');
+      background-image: url('bg2.jpg');
       background-size: cover;
       background-position: center;
       color: #fff;
@@ -33,7 +34,7 @@
       height: 150px;
       border-radius: 50%;
       border: 5px solid white;
-      background-image: url('https://i.pravatar.cc/300');
+      background-image: url('foto.jpg');
       background-size: cover;
       background-position: center;
       margin: 0 auto 20px auto;
@@ -47,10 +48,17 @@
     .link-tree ul {
       list-style: none;
       padding: 0;
+
+      display: flex;
+      justify-content: center;
+
+
     }
 
     .link-tree li {
       margin: 10px 0;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     .link-tree a {
@@ -88,6 +96,28 @@
       color: #eee;
     }
 
+    .card ul {
+      list-style: none;
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
     /* Responsividad */
     @media (max-width: 768px) {
       .card {
@@ -100,25 +130,35 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <!-- Logo circular -->
+
     <div class="logo"></div>
 
-    <!-- Árbol de enlaces -->
-    <div class="link-tree">
+    <!-- Card -->
+    <div class="card">
+      <h3>MIS ENLACES</h3>
+      <!-- Árbol de enlaces -->
+      <div class="link-tree">
+        <ul>
+          <li><a href="#">Enlace 1</a></li>
+          <li><a href="#">Enlace 2</a></li>
+          <li><a href="#">Enlace 3</a></li>
+        </ul>
+      </div>
+      <div class="card"></div>
+     
+      <p>Este es un ejemplo de una card moderna con un diseño limpio y una sombra suave.
       <ul>
         <li><a href="#">Enlace 1</a></li>
         <li><a href="#">Enlace 2</a></li>
         <li><a href="#">Enlace 3</a></li>
       </ul>
+      </p>
     </div>
-
-    <!-- Card -->
-    <div class="card">
-      <h3>Mi Card Copada</h3>
-      <p>Este es un ejemplo de una card moderna con un diseño limpio y una sombra suave.</p>
-    </div>
+  </div>
   </div>
 
   <script>
@@ -126,4 +166,5 @@
     console.log('Página cargada exitosamente.');
   </script>
 </body>
+
 </html>
