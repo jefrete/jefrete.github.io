@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Enlaces Moderna</title>
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1521747116042-5a810fda9664');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Contenedor principal */
+    .container {
+      text-align: center;
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    /* Logo circular */
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      background-image: url('https://i.pravatar.cc/300');
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto 20px auto;
+    }
+
+    /* Árbol de enlaces */
+    .link-tree {
+      margin: 20px 0;
+    }
+
+    .link-tree ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .link-tree li {
+      margin: 10px 0;
+    }
+
+    .link-tree a {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .link-tree a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Card */
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #eee;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      .card {
+        margin-top: 20px;
+      }
+
+      .link-tree a {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo circular -->
+    <div class="logo"></div>
+
+    <!-- Árbol de enlaces -->
+    <div class="link-tree">
+      <ul>
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+      </ul>
+    </div>
+
+    <!-- Card -->
+    <div class="card">
+      <h3>Mi Card Copada</h3>
+      <p>Este es un ejemplo de una card moderna con un diseño limpio y una sombra suave.</p>
+    </div>
+  </div>
+
+  <script>
+    // Puedes añadir interactividad usando JavaScript si quieres.
+    console.log('Página cargada exitosamente.');
+  </script>
+</body>
+</html>
