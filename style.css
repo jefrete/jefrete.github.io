@@ -1,0 +1,231 @@
+
+        /* Reseteo de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            background-color: #f5f5f5;
+        }
+
+        /* Estilo base del cuerpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #f5f5f5;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilo del encabezado */
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ffe600;
+            background-color: #FEA912;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #000000;
+        }
+
+        header figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        header figure img {
+            max-width: 200px;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 400px;
+            background-image: url('banner.png'); /* URL de la imagen de fondo */
+    
+            background-size: cover;
+            background-position: center center; 
+            background-repeat: no-repeat;
+
+            background-attachment: local;
+
+            margin-top: 20px;
+        }
+
+        /* Sección de video o imagen */
+        .media-section {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .media-section img, .media-section video {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #4CAF50;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo de navegación principal */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f5f5f5;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            border-color: #4CAF50;
+        }
+
+        /* Sección principal */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Artículo principal */
+        article {
+            flex: 3;
+            padding: 20px;
+            background-color: #2c2c2c;
+            margin-right: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        article h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        article p {
+            margin-bottom: 15px;
+        }
+
+        /* Barra lateral */
+        aside {
+            flex: 1;
+            padding: 20px;
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        aside h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
+            color: #f5f5f5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        aside ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 2px solid #4CAF50;
+        }
+
+        /* Estilos para enlaces en el pie de página */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            color: #f5f5f5;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #4CAF50;
+        }
+
+        /* Mapa de Google */
+        .map {
+            margin-top: 20px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            header, main {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header figure img {
+                max-width: 80px;
+            }
+
+            article {
+                margin-right: 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+   
