@@ -1,125 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiencias Web - TICs en Primaria</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencias Web en TICs</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados BEM */
+        .experiencias {
+            margin-top: 20px;
+        }
+        .experiencias__item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .experiencias__title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .experiencias__description {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .experiencias__link {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .experiencias__link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  
-  <!-- Header -->
-  <header class="bg-success text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="logo">
-        <a href="#" class="text-white text-decoration-none">
-          <img src="https://via.placeholder.com/50" alt="Logo" class="me-2">
-          TICs en Primaria
-        </a>
-      </div>
-      <nav>
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="experiencias-web.html">Experiencias Web</a>
-          </li>
-          <li class="nav-item"></li>
-            <a class="nav-link text-white" href="html.html">Html</a>
-          </li>
-          <li class="nav-item"></li>
-            <a class="nav-link text-white" href="css.html">Css</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class="bg-primary text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="#" class="text-white text-decoration-none">
+                    <img src="https://via.placeholder.com/50" alt="Logo" class="me-2">
+                    Mi Página
+                </a>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="html.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="css.html">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="trabajos-practicos.html">TRABAJOS PRÁCTICOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="experiencias-web.html">EXPERIENCIAS<br>WEB</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Banner -->
-  <section class="bg-light text-center py-5">
-    <div class="container">
-      <h1>Experiencias Web para TICs en Primaria</h1>
-      <p class="lead">Aquí te mostramos experiencias web educativas para el uso de TICs en primaria.</p>
-    </div>
-  </section>
-
-  <!-- Experiencias Web -->
-  <main class="container py-5">
-    <section>
-      <h2 class="mb-4">Listado de Experiencias Web</h2>
-      <div class="row">
-        <!-- Experiencia 1 -->
-        <div class="col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Experiencia 1: Scratch para Primaria</h5>
-              <p class="card-text">Una plataforma visual que enseña a los niños los conceptos básicos de la programación mediante bloques de código.</p>
-              <a href="https://scratch.mit.edu" class="btn btn-success">Visitar Sitio</a>
-            </div>
-          </div>
+    <!-- Banner -->
+    <section class="bg-light text-center py-5">
+        <div class="container">
+            <h1>Bienvenido a la lista de Experiencias Web</h1>
+            <p class="lead">Demostración de cómo usar Bootstrap 5 para crear una página responsiva.</p>
         </div>
-        <!-- Experiencia 2 -->
-        <div class="col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Experiencia 2: Code.org</h5>
-              <p class="card-text">Una plataforma interactiva que enseña programación y lógica de forma divertida con juegos y desafíos.</p>
-              <a href="https://code.org" class="btn btn-success">Visitar Sitio</a>
-            </div>
-          </div>
-        </div>
-        <!-- Experiencia 3 -->
-        <div class="col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Experiencia 3: Khan Academy</h5>
-              <p class="card-text">Una plataforma educativa que ofrece recursos y videos para aprender matemática, ciencias, programación y más.</p>
-              <a href="https://www.khanacademy.org" class="btn btn-success">Visitar Sitio</a>
-            </div>
-          </div>
-        </div>
-        <!-- Experiencia 4 -->
-        <div class="col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Experiencia 4: Minecraft Education</h5>
-              <p class="card-text">Versión educativa del famoso juego Minecraft para aprender conceptos matemáticos, programación y colaboración.</p>
-              <a href="https://education.minecraft.net" class="btn btn-success">Visitar Sitio</a>
-            </div>
-          </div>
-        </div>
-        <!-- Experiencia 5 -->
-        <div class="col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Experiencia 5: ProFuturo</h5>
-              <p class="card-text">Una iniciativa educativa que ofrece contenido digital y formación docente para enseñar TICs en educación primaria.</p>
-              <a href="https://profuturo.education" class="btn btn-success">Visitar Sitio</a>
-            </div>
-          </div>
-        </div>
-        <!-- Experiencia 6 -->
-        <div class="col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Experiencia 6: Edmodo</h5>
-              <p class="card-text">Una plataforma de aprendizaje social que conecta a estudiantes y maestros para el intercambio de materiales educativos.</p>
-              <a href="https://www.edmodo.com" class="btn btn-success">Visitar Sitio</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <p class="mb-0">© 2024 TICs en Primaria. Todos los derechos reservados.</p>
-  </footer>
+    <!-- Experiencias Web -->
+    <main class="container py-5 experiencias">
+        <h2 class="mb-4">Experiencias Web para TICs en Primaria</h2>
+        <div class="row">
+            <!-- Experiencia 1 -->
+            <div class="col-md-6">
+                <div class="experiencias__item">
+                    <h2 class="experiencias__title">Museo Virtual de Ciencias</h2>
+                    <p class="experiencias__description">Explora una amplia gama de exposiciones interactivas relacionadas con la ciencia y la tecnología.</p>
+                    <a href="https://www.museovirtual.com" class="experiencias__link" target="_blank">Visitar Museo Virtual</a>
+                </div>
+            </div>
+            <!-- Experiencia 2 -->
+            <div class="col-md-6">
+                <div class="experiencias__item">
+                    <h2 class="experiencias__title">Simulador de Despegue Espacial</h2>
+                    <p class="experiencias__description">Una experiencia inmersiva que permite a los estudiantes simular un despegue en una nave espacial.</p>
+                    <a href="https://www.simuladorespace.com" class="experiencias__link" target="_blank">Probar Simulador</a>
+                </div>
+            </div>
+            <!-- Experiencia 3 -->
+            <div class="col-md-6">
+                <div class="experiencias__item">
+                    <h2 class="experiencias__title">Exposición de Arte Interactiva</h2>
+                    <p class="experiencias__description">Una galería de arte virtual donde los estudiantes pueden interactuar con las obras y aprender sobre los artistas.</p>
+                    <a href="https://www.exposicionarte.com" class="experiencias__link" target="_blank">Visitar Exposición</a>
+                </div>
+            </div>
+            <!-- Experiencia 4 -->
+            <div class="col-md-6">
+                <div class="experiencias__item">
+                    <h2 class="experiencias__title">Realidad Aumentada en Educación</h2>
+                    <p class="experiencias__description">Herramientas de realidad aumentada para mejorar la comprensión de conceptos complejos en el aula.</p>
+                    <a href="https://www.realidadaumentada.com" class="experiencias__link" target="_blank">Descubrir Herramientas</a>
+                </div>
+            </div>
+            <!-- Experiencia 5 -->
+            <div class="col-md-6">
+                <div class="experiencias__item">
+                    <h2 class="experiencias__title">Recursos Educativos Abiertos</h2>
+                    <p class="experiencias__description">Una colección de recursos educativos gratuitos para maestros y estudiantes.</p>
+                    <a href="https://www.recursosabiertos.com" class="experiencias__link" target="_blank">Acceder a Recursos</a>
+                </div>
+            </div>
+        </div>
+    </main>
 
-  <!-- Bootstrap 5 JS and Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">© 2024 Mi Página. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
