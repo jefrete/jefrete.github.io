@@ -20,7 +20,7 @@ body {
 
 /* Contenedor principal */
 .container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: #FEA911;
@@ -354,7 +354,7 @@ Para pantallas pequeñas: móviles en modo vertical (hasta 575px)
   }
 
   main {
-    flex-gap: 1rem;
+    gap: 1rem;
     justify-content: space-between;
   }
 
@@ -494,7 +494,6 @@ Para pantallas pequeñas: móviles en modo vertical (hasta 575px)
 
 
 }
-
 /* Para pantallas de escritorio medianas: entre 992px y 1199px */
 @media (min-width: 992px) and (max-width: 1699px) {
 
@@ -540,3 +539,20 @@ Para pantallas pequeñas: móviles en modo vertical (hasta 575px)
     justify-content: space-between;
   }
 }
+
+@media (min-width: 320px),(max-width:639) {
+header h1 {
+font-size:2rem;
+}
+.container{
+background-color: red;
+width:100%;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+font-size:1.5rem;
+}
+nav{
+display:none;}
+header figure img {
+width:300 px ;
+}
+{

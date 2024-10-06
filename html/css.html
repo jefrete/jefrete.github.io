@@ -1,94 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academia de Desarrollo Web</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guía Básica de CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background-color: #eee;
+            padding: 5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .example {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .example h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
 
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
+    <h1>Conceptos Básicos de CSS</h1>
+    <p>En esta página vamos a aprender los fundamentos de CSS. Abajo verás ejemplos prácticos de código con sus resultados en un iFrame, para que veas cómo funcionan sin afectar esta página directamente.</p>
 
-  <body>
-    <!-- Contenedor principal -->
-    <div class="container">
-      <!-- Encabezado -->
-      <header>
-        <figure>
-          <img src="../assets/logo1.jpg" alt="Logo de la Academia" />
-          <!-- Inserta el logo aquí -->
-        </figure>
-        <!-- Navegación principal -->
-        <h1>Academia de Desarrollo Web</h1>
-      </header>
+    <h2>1. Selectores CSS</h2>
+    <p>Los selectores permiten aplicar estilos a elementos HTML. Aquí tienes algunos ejemplos básicos:</p>
 
-      <nav>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="html.html">Html</a></li>
-          <li><a href="css.html">Css</a></li>
-          <li><a href="trabajos-practicos.html">Trabajos Practicos</a></li>
-          <li><a href="experiencias-web.html">Experiencias Webs</a></li>
-
-        </ul>
-      </nav>
-      <!-- Sección para video o imagen -->
-      <section class="media-section">
-        <img src="../assets/banner1.jpg" alt="Imagen descriptiva" />
-        <!-- Inserta una imagen o reemplaza con un video -->
-        <!-- O usa un video -->
-        <!-- <video controls>
-            <source src="video.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video> -->
-      </section>
-
-      <!-- Banner -->
-      <div class="banner">
-        <!-- Banner con imagen de fondo -->
-      </div>
-
-      <!-- Contenido principal -->
-      <main>
-        <!-- Artículo principal -->
-        <article>
-          <h2>Bienvenidos a la Academia de Desarrollo Web</h2>
-          <p>
-            Nos dedicamos a formar a futuros desarrolladores web.
-            Nuestros curso está diseñado para cubrir todos los aspectos del
-            desarrollo web, desde HTML y CSS, hasta JavaScript y frameworks
-            modernos.
-          </p>
-          <p>
-            Únite a nuestra comunidad y comenza tu viaje en el mundo del
-            desarrollo web con nosotros.
-          </p>
-        </article>
-
-        <!-- Barra lateral -->
-        <aside>
-          <h2>Últimas Noticias</h2>
-          <ul>
-            <li><a href="#">Nuevo curso de React.js disponible</a></li>
-            <li>
-              <a href="#">Cómo mejorar tu portfolio como desarrollador</a>
-            </li>
-            <li><a href="#">Tendencias en diseño web para 2024</a></li>
-            <li><a href="#">10 consejos para entrevistas técnicas</a></li>
-          </ul>
-        </aside>
-      </main>
-
-      <!-- Pie de página -->
-      <footer>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>
-          &copy; 2024 Academia de Desarrollo Web. Todos los derechos reservados.
-        </p>
-      </footer>
+    <code>
+        p { color: blue; } /* Cambia el color del texto de los párrafos a azul */
+    </code>
+    
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <iframe srcdoc="
+        <style>
+            p { color: blue; }
+        </style>
+        <p>Este párrafo debería ser azul.</p>
+        <p>Otro párrafo azul.</p>">
+        </iframe>
     </div>
-  </body>
+
+    <h2>2. Propiedades de Texto</h2>
+    <p>Las propiedades relacionadas con el texto, como el tamaño, alineación y tipo de letra, son esenciales.</p>
+
+    <code>
+        h1 { font-size: 2em; text-align: center; } /* Cambia el tamaño y alinea el título */
+        p { font-family: 'Arial', sans-serif; } /* Define la tipografía de los párrafos */
+    </code>
+    
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <iframe srcdoc="
+        <style>
+            h1 { font-size: 2em; text-align: center; }
+            p { font-family: 'Arial', sans-serif; }
+        </style>
+        <h1>Título centrado</h1>
+        <p>Texto con fuente Arial.</p>">
+        </iframe>
+    </div>
+
+    <h2>3. Colores y Fondos</h2>
+    <p>CSS permite cambiar colores de texto, fondos y bordes. Aquí algunos ejemplos:</p>
+
+    <code>
+        body { background-color: #f0f0f0; }
+        p { color: #333; background-color: #e0e0e0; padding: 10px; }
+    </code>
+    
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <iframe srcdoc="
+        <style>
+            body { background-color: #f0f0f0; }
+            p { color: #333; background-color: #e0e0e0; padding: 10px; }
+        </style>
+        <p>Texto con fondo gris claro y color de texto oscuro.</p>">
+        </iframe>
+    </div>
+
+    <h2>4. Bordes, Márgenes y Paddings</h2>
+    <p>Los márgenes, bordes y paddings son propiedades clave para la disposición de los elementos.</p>
+
+    <code>
+        div {
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 20px;
+        }
+    </code>
+    
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <iframe srcdoc="
+        <style>
+            div { 
+                border: 2px solid #333; 
+                padding: 10px;
+                margin: 20px;
+            }
+        </style>
+        <div>Un div con margen y padding aplicado.</div>">
+        </iframe>
+    </div>
+
+    <h2>5. Modelo de Caja</h2>
+    <p>El modelo de caja en CSS define cómo se comportan los elementos en cuanto a ancho, alto, márgenes y relleno.</p>
+
+    <code>
+        .box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid #333;
+            margin: 10px;
+        }
+    </code>
+    
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <iframe srcdoc="
+        <style>
+            .box {
+                width: 200px;
+                height: 100px;
+                padding: 20px;
+                border: 5px solid #333;
+                margin: 10px;
+            }
+        </style>
+        <div class='box'>Caja con modelo de caja aplicado.</div>">
+        </iframe>
+    </div>
+
+    <h2>6. Layout con Flexbox</h2>
+    <p>Flexbox es una técnica muy poderosa para crear layouts flexibles y alineaciones avanzadas.</p>
+
+    <code>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .item {
+            background-color: #ddd;
+            padding: 20px;
+            width: 100px;
+        }
+    </code>
+    
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <iframe srcdoc="
+        <style>
+            .container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .item {
+                background-color: #ddd;
+                padding: 20px;
+                width: 100px;
+            }
+        </style>
+        <div class='container'>
+            <div class='item'>Item 1</div>
+            <div class='item'>Item 2</div>
+            <div class='item'>Item 3</div>
+        </div>">
+        </iframe>
+    </div>
+
+    <h2>7. Buenas Prácticas</h2>
+    <p>Al escribir CSS, es importante seguir buenas prácticas como el uso de nombres de clases descriptivos, separar el estilo del contenido y evitar el uso excesivo de IDs como selectores.</p>
+
+    <code>
+        /* Buena práctica de nombres */
+        .boton-primario {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+    </code>
+    
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <iframe srcdoc="
+        <style>
+            .boton-primario {
+                background-color: #007BFF;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+            }
+        </style>
+        <button class='boton-primario'>Botón Primario</button>">
+        </iframe>
+    </div>
+
+</body>
 </html>
