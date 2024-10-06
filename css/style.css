@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   background-color: #ffffff;
 }
@@ -16,6 +17,7 @@ body {
   line-height: 1.4;
   padding: 15px;
 }
+
 /* Contenedor principal */
 .container {
   width: 95%;
@@ -25,6 +27,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   line-height: 1.2;
 }
+
 /* Estilo del encabezado */
 header {
   display: flex;
@@ -36,23 +39,31 @@ header {
   border-bottom: 2px solid #000000;
   background-color: #fea911;
 }
+
 header h1 {
   font-size: 3.5rem;
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
 }
+h2 {
+  color: rgb(255, 0, 0);
+}
+
 header figure {
   margin: 0;
   padding: 0;
 }
+
 header figure img {
   max-width: 200px;
 }
+
 /* Banner */
 .banner {
   width: 100%;
   height: 400px;
-  background-image: url("../assets/banner.png"); /* URL de la imagen de fondo */
+  background-image: url("../assets/banner.png");
+  /* URL de la imagen de fondo */
 
   background-size: cover;
   background-position: center center;
@@ -62,12 +73,14 @@ header figure img {
 
   margin-top: 10px;
 }
+
 /* Sección de video o imagen */
 .media-section {
   display: flex;
   justify-content: center;
   margin: 15px 0;
 }
+
 .media-section img,
 .media-section video {
   max-width: 100%;
@@ -75,6 +88,7 @@ header figure img {
   border: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
+
 /* Estilo de navegación principal */
 nav {
   background-color: #0097b6;
@@ -83,15 +97,18 @@ nav {
   font-weight: 600;
   text-align: center;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 nav ul li {
   margin: 0 15px;
 }
+
 nav ul li a {
   color: #ffffff;
   text-decoration: none;
@@ -99,12 +116,14 @@ nav ul li a {
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
+
 nav ul li a:hover {
   border-color: #4caf50;
   background-color: red;
   color: #ffffff;
   font-size: 1.5rem;
 }
+
 /* Sección principal */
 main {
   display: flex;
@@ -113,6 +132,7 @@ main {
   justify-content: space-between;
   margin-top: 10px;
 }
+
 /* Artículo principal */
 article {
   flex-basis: 74%;
@@ -121,12 +141,12 @@ article {
   font-size: 30px;
 
   color: #f5f5f5;
-  background-color: #2e2a2a;
+  background-color: #000000;
   filter: brightness(1.3);
 }
 
 article h2 {
-  color: #fcbe38;
+  color: #00CBD6;
   margin-bottom: 15px;
 }
 
@@ -207,18 +227,156 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#centrado{
-    font-size: 3rem;
-    line-height: 1.4;
-    align-content: center;
-    text-align: center;
-    padding: 3rem;
+#centrado {
+  font-size: 3rem;
+  line-height: 1.4;
+  align-content: center;
+  text-align: center;
+  padding: 3rem;
 }
 
-/* Estilos Responsivos */
-@media (max-width: 768px) {
+
+/* -------------------------
+
+Para pantallas pequeñas: móviles en modo vertical (hasta 575px)
+-------------------------- */
+@media (max-width: 575px) {
+  * {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  body {
+    width: 100%;
+    padding: 0px;
+  }
+
+  header {
+    background-color: #FEAA11;
+    flex-direction: column;
+    align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  }
+  h1 {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    
+  }
+  h2{
+    padding: 0;
+    margin: 0;
+  }
+
+ .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav{
+    display: none;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  main{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  article{
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    flex-basis: 100%;
+    font-size: 2rem;
+
+  }
+aside{
+  width: 100%;
+  flex-basis: 100%;
+
+}
+
+  .menu-hamburguesa {
+    display: flex;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .banner {
+    display: none;
+  }
+
+}
+
+/* Para dispositivos medianos: móviles grandes y tablets en modo vertical (576px a 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+  html {
+    width: 100vh;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  header {
+    background-color: yellow;
+  }
+
+  .contenido {
+    padding: 15px;
+  }
+
+  iframe {
+    height: 250px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+}
+
+/* Para tablets y pantallas pequeñas: dispositivos entre 768px y 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+
   header,
   main {
+
+    background-color: rgb(0, 255, 255);
     flex-direction: column;
     text-align: center;
   }
@@ -233,5 +391,135 @@ footer {
 
   nav ul li {
     margin: 10px 0;
+  }
+
+  /* Estilos generales aplicados a todos los dispositivos */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-hamburguesa div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+  }
+
+  .contenido {
+    padding: 20px;
+  }
+
+  h1,
+  h2 {
+    color: #333;
+  }
+
+  code {
+    background-color: #eee;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+
+  /* Ejemplo de contenedores flexibles */
+  .example {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .contenido {
+    padding: 30px;
+  }
+
+  iframe {
+    height: 300px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Para pantallas de escritorio medianas: entre 992px y 1199px */
+@media (min-width: 992px) and (max-width: 1699px) {
+
+  header {
+    background-color: brown;
+  }
+
+  .contenido {
+    padding: 40px;
+  }
+
+  iframe {
+    height: 350px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Para pantallas grandes: desde 1200px en adelante */
+@media (min-width: 1200px) {
+  .contenido {
+    padding: 50px;
+  }
+
+  iframe {
+    height: 400px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
