@@ -287,38 +287,38 @@ Para pantallas pequeñas: móviles en modo vertical (hasta 575px)
     text-align: center;
     padding: 0;
     margin: 0;
-    border: none;
   }
 
   header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0;
-margin-bottom: 1rem;
   }
-
   h2 {
     padding: 0;
     margin: 0;
   }
-
   nav {
-    display: flex;
+    display: flex; 
   }
-
   nav ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
   .container {
     width: 100%;
     margin: 0;
     padding: 0;
   }
   main {
-    flex-basis: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
+    margin: 0 auto; 
+    padding: 0;
     flex-direction: column;
     justify-content: center;
   }
@@ -328,36 +328,25 @@ margin-bottom: 1rem;
     margin: 0;
     padding: 1rem;
     flex-basis: 100%;
-    font-size: 1.5rem;
-
+    font-size: 1rem;
   }
-
   aside {
     width: 100%;
     flex-basis: 100%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: yellowgreen;
+    padding: 1rem;
 
   }
-
   .menu-hamburguesa {
     display: flex;
   }
-
   .menu.active {
     display: flex;
     flex-direction: column;
   }
-
-  nav ul li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .banner {
-    display: none;
-  }
-  /* Pie de página *//*footer*/
+  
+ 
 footer {
   width: 100%;
   height: 300px;
