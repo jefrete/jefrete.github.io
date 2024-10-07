@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - Grids Layout</title>
+
+  <link rel="stylesheet" href="../css/grid.css">
+</head>
+
+<body>
+
+  <div class="grid-contenedor">
+    <!-- Header / Navigation -->
+    <header class="grid-item">
+      <figure>
+        <img src="../assets/logo1.jpg" style="width: 200px;" alt="Logo de la Academia" />
+        <!-- Inserta el logo aquí -->
+      </figure>
+      <!-- Navegación principal -->
+      <h1>Academia de Desarrollo Web</h1>
+    </header>
+
+    <nav class="grid-item">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="html.html">Html</a></li>
+        <li><a href="css.html">Css</a></li>
+        <li><a href="grid.html">Grid</a></li>
+        <li><a href="trabajos-practicos.html">Trabajos Practicos</a></li>
+        <li><a href="experiencias-web.html">Experiencias Web</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="grid-item">
+      <h1>Sobre Nosotros</h1>
+      <section>
+        <h2>Propiedades Básicas de CSS Grid Aplicadas al Contenedor (Padre)</h2>
+    
+        <p>
+            En este módulo, exploraremos las propiedades fundamentales de <strong>CSS Grid</strong> que se aplican al contenedor (padre).
+            Estas propiedades permiten definir la estructura y disposición de los elementos hijos dentro de una grilla.
+            A continuación, se detallan cada una de estas propiedades junto con ejemplos de código CSS y su resultado visual.
+        </p>
+    
+        <h3>display: grid</h3>
+        <p>La propiedad <code>display: grid</code> convierte un elemento en un contenedor de grilla, lo que permite organizar sus elementos hijos en filas y columnas.</p>
+        <pre><code>.container {
+        display: grid;
+    }</code></pre>
+    
+        <h3>grid-template-columns</h3>
+        <p>La propiedad <code>grid-template-columns</code> define la estructura de las columnas en la grilla. Puedes especificar el tamaño de cada columna usando unidades como px, %, fr, entre otras.</p>
+        <pre><code>.container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }</code></pre>
+    
+        <h4>Ejemplo Visual:</h4>
+        <table>
+            <tr>
+                <th>Columna 1</th>
+                <th>Columna 2</th>
+                <th>Columna 3</th>
+            </tr>
+            <tr>
+                <td>1fr</td>
+                <td>2fr</td>
+                <td>1fr</td>
+            </tr>
+        </table>
+    
+        <h3>grid-template-rows</h3>
+        <p>La propiedad <code>grid-template-rows</code> define la estructura de las filas en la grilla, similar a cómo <code>grid-template-columns</code> define las columnas.</p>
+        <pre><code>.container {
+        display: grid;
+        grid-template-rows: 100px 200px;
+    }</code></pre>
+    
+        <h4>Ejemplo Visual:</h4>
+        <table>
+            <tr>
+                <td>Fila 1 (100px)</td>
+            </tr>
+            <tr>
+                <td>Fila 2 (200px)</td>
+            </tr>
+        </table>
+    
+        <h3>grid-template-areas</h3>
+        <p>La propiedad <code>grid-template-areas</code> permite nombrar áreas dentro de la grilla para facilitar el posicionamiento de los elementos hijos. Se usan nombres de áreas definidos en los elementos hijos.</p>
+        <pre><code>.container {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "sidebar main";
+    }
+    
+    .header {
+        grid-area: header;
+    }
+    
+    .sidebar {
+        grid-area: sidebar;
+    }
+    
+    .main {
+        grid-area: main;
+    }</code></pre>
+    
+        <h4>Ejemplo Visual:</h4>
+        <table>
+            <tr>
+                <th>Header</th>
+                <th>Header</th>
+            </tr>
+            <tr>
+                <td>Sidebar</td>
+                <td>Main</td>
+            </tr>
+        </table>
+    
+        <h3>column-gap</h3>
+        <p>La propiedad <code>column-gap</code> (anteriormente <code>grid-column-gap</code>) define el espacio entre las columnas de la grilla.</p>
+        <pre><code>.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+    }</code></pre>
+    
+        <h4>Ejemplo Visual:</h4>
+        <p>| Columna 1 | 20px | Columna 2 | 20px | Columna 3 |</p>
+    
+        <h3>row-gap</h3>
+        <p>La propiedad <code>row-gap</code> (anteriormente <code>grid-row-gap</code>) define el espacio entre las filas de la grilla.</p>
+        <pre><code>.container {
+        display: grid;
+        grid-template-rows: 100px 100px;
+        row-gap: 20px;
+    }</code></pre>
+    
+        <h4>Ejemplo Visual:</h4>
+        <p>| Fila 1 (100px) |<br>| 20px |<br>| Fila 2 (100px) |</p>
+    
+        <h3>Ejemplo Completo</h3>
+        <p>A continuación, se presenta un ejemplo completo que combina varias de estas propiedades para ilustrar cómo se pueden usar juntas para crear una grilla compleja.</p>
+        <pre><code>.container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 100px 200px;
+        grid-template-areas:
+            "header header header"
+            "sidebar main .";
+        column-gap: 20px;
+        row-gap: 10px;
+    }
+    
+    .header {
+        grid-area: header;
+    }
+    
+    .sidebar {
+        grid-area: sidebar;
+    }
+    
+    .main {
+        grid-area: main;
+    }</code></pre>
+    
+        <h4>Ejemplo Visual Completo:</h4>
+        <table>
+            <tr>
+                <th>Header</th>
+                <th>Header</th>
+                <th>Header</th>
+            </tr>
+            <tr>
+                <td>Sidebar</td>
+                <td>Main</td>
+                <td>(vacío)</td>
+            </tr>
+        </table>
+    
+        <p>
+            <strong>Explicación:</strong><br>
+            En este ejemplo, el contenedor de grilla tiene tres columnas y dos filas.<br>
+            Las áreas se definen con nombres como "header", "sidebar" y "." (un punto representa un área vacía).<br>
+            Se aplica un espacio de 20px entre las columnas y 10px entre las filas.<br>
+            Cada elemento hijo (<code>header</code>, <code>sidebar</code>, <code>main</code>) se posiciona en el área correspondiente usando la propiedad <code>grid-area</code>.
+        </p>
+    </section>
+
+    <aside class="grid-item">
+      <h1>Sobre Nosotros</h1>
+      <p>Somos una empresa dedicada a mostrar cómo se utiliza CSS Grid y Flexbox para crear layouts modernos y
+        responsivos.</p>
+    </aside>
+
+    <footer class="grid-item">
+      <div class="footer-content">
+          <div class="social-links">
+              <a href="https://facebook.com" target="_blank" class="social-icon">
+                  <img src="../assets/logos/facebook-removebg-preview (1).png" alt="Facebook">
+              </a>
+              <a href="https://twitter.com" target="_blank" class="social-icon">
+                  <img src="../assets/logos/twitter-removebg-preview (1).png" alt="Twitter">
+              </a>
+              <a href="https://instagram.com" target="_blank" class="social-icon">
+                  <img src="../assets/logos/instagram-removebg-preview (1).png" alt="Instagram">
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-icon">
+                  <img src="../assets/logos/linkedin-removebg-preview (1).png" alt="LinkedIn">
+              </a>
+              <a href="https://youtube.com" target="_blank" class="social-icon">
+                  <img src="../assets/logos/youtube-removebg-preview (2).png" alt="YouTube">
+              </a>
+          </div>
+
+          <p class="footer-text">
+              © 2024 Nombre de la Empresa. Todos los derechos reservados. <br>
+              Dirección: Calle Falsa 123, Ciudad, País. <br>
+              Teléfono: (123) 456-7890. <br>
+              Email: contacto@empresa.com
+          </p>
+      </div>
+  </footer>
+
+  </div>
+</body>
+
+</html>

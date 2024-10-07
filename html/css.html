@@ -1,120 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Guía Básica de CSS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        code {
-            background-color: #eee;
-            padding: 5px;
-            display: block;
-            margin-bottom: 10px;
-        }
-        iframe {
-            width: 100%;
-            height: 200px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-        }
-        .example {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .example h3 {
-            margin-top: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Guía Básica de CSS</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
 </head>
+
 <body>
+  <div class="container">
 
-    <h1>Conceptos Básicos de CSS</h1>
-    <p>En esta página vamos a aprender los fundamentos de CSS. Abajo verás ejemplos prácticos de código con sus resultados en un iFrame, para que veas cómo funcionan sin afectar esta página directamente.</p>
+    <header>
+      <figure>
+        <img src="../assets/logo1.jpg" alt="Logo de la Academia" />
+        <!-- Inserta el logo aquí -->
+      </figure>
+      <!-- Navegación principal -->
+      <h1>C.P.E.M. N°7<br>INFORMATICA
 
-    <h2>1. Selectores CSS</h2>
-    <p>Los selectores permiten aplicar estilos a elementos HTML. Aquí tienes algunos ejemplos básicos:</p>
 
-    <code>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="html.html">Html</a></li>
+        <li><a href="css.html">Css</a></li>
+        <li><a href="grid.html">Grid</a></li>
+        <li><a href="trabajos-practicos.html">Trabajos Practicos</a></li>
+        <li><a href="experiencias-web.html">Experiencias Web</a></li>
+
+      </ul>
+    </nav>
+    <!-- Sección para video o imagen -->
+
+    <!-- Banner -->
+    <div class="banner">
+      <!-- Banner con imagen de fondo -->
+    </div>
+
+    <main>
+      <section>
+        <h1>Conceptos Básicos de CSS</h1>
+        <p>En esta página vamos a aprender los fundamentos de CSS. Abajo verás ejemplos prácticos de código con sus
+          resultados en un iFrame, para que veas cómo funcionan sin afectar esta página directamente.</p>
+
+        <h2>1. Selectores CSS</h2>
+        <p>Los selectores permiten aplicar estilos a elementos HTML. Aquí tienes algunos ejemplos básicos:</p>
+
+        <code>
         p { color: blue; } /* Cambia el color del texto de los párrafos a azul */
     </code>
-    
-    <div class="example">
-        <h3>Ejemplo:</h3>
-        <iframe srcdoc="
+
+        <div class="example">
+          <h3>Ejemplo:</h3>
+          <iframe srcdoc="
         <style>
             p { color: blue; }
         </style>
         <p>Este párrafo debería ser azul.</p>
         <p>Otro párrafo azul.</p>">
-        </iframe>
-    </div>
+          </iframe>
+        </div>
 
-    <h2>2. Propiedades de Texto</h2>
-    <p>Las propiedades relacionadas con el texto, como el tamaño, alineación y tipo de letra, son esenciales.</p>
+        <h2>2. Propiedades de Texto</h2>
+        <p>Las propiedades relacionadas con el texto, como el tamaño, alineación y tipo de letra, son esenciales.</p>
 
-    <code>
+        <code>
         h1 { font-size: 2em; text-align: center; } /* Cambia el tamaño y alinea el título */
         p { font-family: 'Arial', sans-serif; } /* Define la tipografía de los párrafos */
     </code>
-    
-    <div class="example">
-        <h3>Ejemplo:</h3>
-        <iframe srcdoc="
+
+        <div class="example">
+          <h3>Ejemplo:</h3>
+          <iframe srcdoc="
         <style>
             h1 { font-size: 2em; text-align: center; }
             p { font-family: 'Arial', sans-serif; }
         </style>
         <h1>Título centrado</h1>
         <p>Texto con fuente Arial.</p>">
-        </iframe>
-    </div>
+          </iframe>
+        </div>
 
-    <h2>3. Colores y Fondos</h2>
-    <p>CSS permite cambiar colores de texto, fondos y bordes. Aquí algunos ejemplos:</p>
+        <h2>3. Colores y Fondos</h2>
+        <p>CSS permite cambiar colores de texto, fondos y bordes. Aquí algunos ejemplos:</p>
 
-    <code>
+        <code>
         body { background-color: #f0f0f0; }
         p { color: #333; background-color: #e0e0e0; padding: 10px; }
     </code>
-    
-    <div class="example">
-        <h3>Ejemplo:</h3>
-        <iframe srcdoc="
+
+        <div class="example">
+          <h3>Ejemplo:</h3>
+          <iframe srcdoc="
         <style>
             body { background-color: #f0f0f0; }
             p { color: #333; background-color: #e0e0e0; padding: 10px; }
         </style>
         <p>Texto con fondo gris claro y color de texto oscuro.</p>">
-        </iframe>
-    </div>
+          </iframe>
+        </div>
 
-    <h2>4. Bordes, Márgenes y Paddings</h2>
-    <p>Los márgenes, bordes y paddings son propiedades clave para la disposición de los elementos.</p>
+        <h2>4. Bordes, Márgenes y Paddings</h2>
+        <p>Los márgenes, bordes y paddings son propiedades clave para la disposición de los elementos.</p>
 
-    <code>
+        <code>
         div {
             border: 2px solid #333;
             padding: 10px;
             margin: 20px;
         }
     </code>
-    
-    <div class="example">
-        <h3>Ejemplo:</h3>
-        <iframe srcdoc="
+
+        <div class="example">
+          <h3>Ejemplo:</h3>
+          <iframe srcdoc="
         <style>
             div { 
                 border: 2px solid #333; 
@@ -123,13 +128,14 @@
             }
         </style>
         <div>Un div con margen y padding aplicado.</div>">
-        </iframe>
-    </div>
+          </iframe>
+        </div>
 
-    <h2>5. Modelo de Caja</h2>
-    <p>El modelo de caja en CSS define cómo se comportan los elementos en cuanto a ancho, alto, márgenes y relleno.</p>
+        <h2>5. Modelo de Caja</h2>
+        <p>El modelo de caja en CSS define cómo se comportan los elementos en cuanto a ancho, alto, márgenes y relleno.
+        </p>
 
-    <code>
+        <code>
         .box {
             width: 200px;
             height: 100px;
@@ -138,10 +144,10 @@
             margin: 10px;
         }
     </code>
-    
-    <div class="example">
-        <h3>Ejemplo:</h3>
-        <iframe srcdoc="
+
+        <div class="example">
+          <h3>Ejemplo:</h3>
+          <iframe srcdoc="
         <style>
             .box {
                 width: 200px;
@@ -152,13 +158,13 @@
             }
         </style>
         <div class='box'>Caja con modelo de caja aplicado.</div>">
-        </iframe>
-    </div>
+          </iframe>
+        </div>
 
-    <h2>6. Layout con Flexbox</h2>
-    <p>Flexbox es una técnica muy poderosa para crear layouts flexibles y alineaciones avanzadas.</p>
+        <h2>6. Layout con Flexbox</h2>
+        <p>Flexbox es una técnica muy poderosa para crear layouts flexibles y alineaciones avanzadas.</p>
 
-    <code>
+        <code>
         .container {
             display: flex;
             justify-content: space-between;
@@ -169,10 +175,10 @@
             width: 100px;
         }
     </code>
-    
-    <div class="example">
-        <h3>Ejemplo:</h3>
-        <iframe srcdoc="
+
+        <div class="example">
+          <h3>Ejemplo:</h3>
+          <iframe srcdoc="
         <style>
             .container {
                 display: flex;
@@ -189,13 +195,139 @@
             <div class='item'>Item 2</div>
             <div class='item'>Item 3</div>
         </div>">
-        </iframe>
-    </div>
+          </iframe>
+        </div>
 
-    <h2>7. Buenas Prácticas</h2>
-    <p>Al escribir CSS, es importante seguir buenas prácticas como el uso de nombres de clases descriptivos, separar el estilo del contenido y evitar el uso excesivo de IDs como selectores.</p>
+        <h2>7. Buenas Prácticas</h2>
+        <p>Al escribir CSS, es importante seguir buenas prácticas como el uso de nombres de clases descriptivos, separar
+          el estilo del contenido y evitar el uso excesivo de IDs como selectores.</p>
 
-    <code>
+        <section>
+          <h2>4TO A - CPEM 7</h2>
+
+          <h3>HTML</h3>
+          <p><strong>Introducción</strong></p>
+          <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Utiliza etiquetas para
+            estructurar el contenido en un documento que puede ser interpretado por los navegadores.</p>
+
+          <h4>Estructura Básica de un Documento HTML</h4>
+          <pre><code>&lt;!DOCTYPE html&gt;
+  &lt;html lang="es"&gt;
+  &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;title&gt;Título de la Página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;!-- Contenido va aquí --&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+
+          <p><strong>Crear la estructura básica de un documento HTML5 utilizando atajos en los editores de
+              código:</strong></p>
+          <ul>
+            <li>En Visual Studio Code o Sublime Text:</li>
+            <li>Escribe <code>html:5</code> y presiona <code>Tab</code>.</li>
+            <li>Escribe <code>!</code> y presiona <code>Tab</code>.</li>
+          </ul>
+
+          <h4>Comentarios en HTML</h4>
+          <p>Los comentarios en HTML se utilizan para dejar notas o explicaciones en el código que no serán visibles en
+            el
+            navegador. Son útiles para documentar el código y facilitar su comprensión.</p>
+          <pre><code>&lt;!-- Este es un comentario en HTML --&gt;
+  &lt;p&gt;Este es un párrafo.&lt;/p&gt;
+  &lt;!--
+    Este es un comentario
+    que abarca múltiples
+    líneas.
+  --&gt;</code></pre>
+
+          <h4>Etiquetas Básicas de HTML</h4>
+          <ul>
+            <li><strong>Encabezados</strong> (de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>)</li>
+            <li><code>&lt;p&gt;</code> - Define un párrafo.</li>
+            <li><code>&lt;a&gt;</code> - Define un hipervínculo usando el atributo <code>href</code>.</li>
+            <li><code>&lt;img&gt;</code> - Define una imagen, con atributos <code>src</code> y <code>alt</code>.</li>
+            <li><code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code> - Listas no ordenadas y ordenadas respectivamente.
+            </li>
+            <li><code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> - Definen divisiones y secciones en línea.</li>
+            <li><code>&lt;form&gt;</code> - Define un formulario con campos de entrada.</li>
+            <li><code>&lt;table&gt;</code> - Define una tabla con filas (<code>&lt;tr&gt;</code>) y celdas
+              (<code>&lt;td&gt;</code> y <code>&lt;th&gt;</code>).</li>
+          </ul>
+
+          <h4>Atributos Globales</h4>
+          <ul>
+            <li><strong>id:</strong> Define un identificador único.</li>
+            <li><strong>class:</strong> Define una o varias clases.</li>
+            <li><strong>style:</strong> Define estilos CSS en línea.</li>
+            <li><strong>title:</strong> Proporciona un texto emergente adicional.</li>
+          </ul>
+
+          <h4>Etiquetas Semánticas</h4>
+          <p>Las etiquetas semánticas proporcionan un significado claro sobre la estructura del contenido. Algunas de
+            ellas son:</p>
+          <ul>
+            <li><code>&lt;header&gt;</code> - Encabezado de una página o sección.</li>
+            <li><code>&lt;nav&gt;</code> - Sección de navegación.</li>
+            <li><code>&lt;section&gt;</code> - Sección del documento.</li>
+            <li><code>&lt;article&gt;</code> - Contenido independiente.</li>
+            <li><code>&lt;aside&gt;</code> - Contenido adicional o complementario.</li>
+            <li><code>&lt;footer&gt;</code> - Pie de página.</li>
+          </ul>
+
+          <h4>Buenas Prácticas</h4>
+          <ol>
+            <li>Usa etiquetas semánticas para mejorar accesibilidad y SEO.</li>
+            <li>Cierra correctamente las etiquetas.</li>
+            <li>Escribe un código limpio y bien estructurado.</li>
+            <li>Documenta el código con comentarios.</li>
+            <li>Valida tu HTML en servicios como el <a href="https://validator.w3.org/" target="_blank">W3C Markup
+                Validation Service</a>.</li>
+          </ol>
+
+          <h3>CSS</h3>
+          <p><strong>Introducción</strong></p>
+          <p>CSS (Cascading Style Sheets) es el lenguaje utilizado para describir la presentación de documentos HTML.
+            CSS
+            controla el diseño y el formato de las páginas web.</p>
+
+          <h4>Comentarios en CSS</h4>
+          <p>Los comentarios en CSS se utilizan de manera similar a HTML. Se inician con <code>/*</code> y terminan con
+            <code>*/</code>.
+          </p>
+          <pre><code>/* Este es un comentario en CSS */
+  body {
+    font-family: Arial, sans-serif;
+  }</code></pre>
+
+          <h4>Cómo Enlazar CSS a un Documento HTML</h4>
+          <p>El método recomendado es enlazar un archivo CSS externo con la etiqueta <code>&lt;link&gt;</code> en el
+            <code>&lt;head&gt;</code> del documento HTML.
+          </p>
+          <pre><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
+
+          <h4>Selectores Básicos de CSS</h4>
+          <ul>
+            <li><strong>Selector de Elemento:</strong> Aplica estilos a todos los elementos de un tipo.</li>
+            <li><strong>Selector de Clase:</strong> Aplica estilos a elementos con una clase específica, usando
+              <code>.</code> seguido del nombre de la clase.
+            </li>
+            <li><strong>Selector de ID:</strong> Aplica estilos a un elemento con un ID específico, usando
+              <code>#</code>.
+            </li>
+          </ul>
+
+          <h4>Buenas Prácticas en CSS</h4>
+          <ol>
+            <li>Usa archivos CSS externos para mantener el HTML limpio.</li>
+            <li>Utiliza nombres de clases descriptivos.</li>
+            <li>Comenta el código CSS para explicar secciones complejas.</li>
+            <li>Organiza el CSS en bloques lógicos y usa unidades relativas como <code>em</code> o <code>rem</code>.
+            </li>
+          </ol>
+
+          <code>
         /* Buena práctica de nombres */
         .boton-primario {
             background-color: #007BFF;
@@ -204,11 +336,13 @@
             border: none;
             border-radius: 5px;
         }
-    </code>
-    
-    <div class="example">
-        <h3>Ejemplo:</h3>
-        <iframe srcdoc="
+      </code>
+
+        </section>
+
+        <div class="example">
+          <h3>Ejemplo:</h3>
+          <iframe srcdoc="
         <style>
             .boton-primario {
                 background-color: #007BFF;
@@ -219,8 +353,40 @@
             }
         </style>
         <button class='boton-primario'>Botón Primario</button>">
-        </iframe>
-    </div>
+          </iframe>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" class="social-icon">
+            <img src="../assets/logos/facebook-removebg-preview (1).png" alt="Facebook">
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon">
+            <img src="../assets/logos/twitter-removebg-preview (1).png" alt="Twitter">
+          </a>
+          <a href="https://instagram.com" target="_blank" class="social-icon">
+            <img src="../assets/logos/instagram-removebg-preview (1).png" alt="Instagram">
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon">
+            <img src="../assets/logos/linkedin-removebg-preview (1).png" alt="LinkedIn">
+          </a>
+          <a href="https://youtube.com" target="_blank" class="social-icon">
+            <img src="../assets/logos/youtube-removebg-preview (2).png" alt="YouTube">
+          </a>
+        </div>
+        <p class="footer-text">
+          © 2024 Nombre de la Empresa. Todos los derechos reservados. <br>
+          Dirección: Calle Falsa 123, Ciudad, País. <br>
+          Teléfono: (123) 456-7890. <br>
+          Email: contacto@empresa.com
+        </p>
+      </div>
+    </footer>
+
+  </div>
 
 </body>
+
 </html>
