@@ -10,6 +10,8 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
+
 /* Estilo base del cuerpo */
 body {
   background-color: #ffffff;
@@ -106,6 +108,8 @@ main {
 
 /* Artículo principal */
 article {
+  width: 100%;
+  text-align: center;
   flex-basis: 70%;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -127,6 +131,9 @@ article h2 {
 
 article p {
   margin-bottom: 15px;
+}
+article ul li {
+  list-style: none;
 }
 
 /* Barra lateral */
@@ -164,7 +171,9 @@ aside ul li a {
 aside ul li a:hover {
   color: #4caf50;
 }
-
+pre{
+text-align: center;
+}
 /*footer*/
 footer {
   width: 100%;
@@ -253,6 +262,17 @@ footer .footer-links a {
   height: 500px;
   border: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+pre {
+  background-color: #000000;
+  color: rgb(0, 255, 30);
+  padding: 10px;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-weight: 600;
+  align-items: center;
+  text-align: center;
+  /* Permite el ajuste de línea */
 }
 
 /* -------------------------

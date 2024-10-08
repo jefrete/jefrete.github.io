@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Guía Básica de CSS</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  
 
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -37,7 +40,7 @@
       <!-- Banner con imagen de fondo -->
     </div>
     <main>
-       <h2>HTML</h2>
+      <h2>HTML</h2>
       <article>
         <h3>Introducción</h3>
         <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Utiliza etiquetas para
@@ -47,17 +50,17 @@
       <article>
         <h3>Estructura Básica de un Documento HTML</h3>
         <pre>
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="es"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;title&gt;Título de la Página&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;!-- Contenido va aquí --&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="es"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título de la Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Contenido va aquí --&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
         <p>Puedes crear la estructura básica de un documento HTML5 utilizando atajos en editores de código:</p>
         <ul>
           <li>En <strong>Visual Studio Code</strong> o <strong>Sublime Text</strong>, escribe <code>html:5</code> y
@@ -70,14 +73,14 @@
         <h3>Comentarios en HTML</h3>
         <p>Los comentarios se utilizan para dejar notas que no serán visibles en el navegador:</p>
         <pre>
-                &lt;!-- Este es un comentario en HTML --&gt;
-                &lt;p&gt;Este es un párrafo.&lt;/p&gt;
-                &lt;!--
-                  Este es un comentario
-                  que abarca múltiples
-                  líneas.
-                --&gt;
-            </pre>
+        &lt;!-- Este es un comentario en HTML --&gt;
+        &lt;p&gt;Este es un párrafo.&lt;/p&gt;
+        &lt;!--
+        Este es un comentario
+        que abarca múltiples
+        líneas.
+        --&gt;
+      </pre>
       </article>
 
       <article>
@@ -86,9 +89,9 @@
         <p>Las etiquetas <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> definen encabezados de diferentes niveles:
         </p>
         <pre>
-                &lt;h1&gt;Encabezado 1&lt;/h1&gt;
-                &lt;h2&gt;Encabezado 2&lt;/h2&gt;
-            </pre>
+    &lt;h1&gt;Encabezado 1&lt;/h1&gt;
+    &lt;h2&gt;Encabezado 2&lt;/h2&gt;
+        </pre>
 
         <h4>Párrafos</h4>
         <p>La etiqueta <code>&lt;p&gt;</code> define un párrafo:</p>
@@ -107,16 +110,16 @@
         <p>Las etiquetas <code>&lt;ul&gt;</code> (lista no ordenada) y <code>&lt;ol&gt;</code> (lista ordenada)
           contienen <code>&lt;li&gt;</code> (elementos de lista):</p>
         <pre>
-                &lt;ul&gt;
-                    &lt;li&gt;Elemento 1&lt;/li&gt;
-                    &lt;li&gt;Elemento 2&lt;/li&gt;
-                &lt;/ul&gt;
-    
-                &lt;ol&gt;
-                    &lt;li&gt;Elemento 1&lt;/li&gt;
-                    &lt;li&gt;Elemento 2&lt;/li&gt;
-                &lt;/ol&gt;
-            </pre>
+      &lt;ul&gt;
+          &lt;li&gt;Elemento 1&lt;/li&gt;
+          &lt;li&gt;Elemento 2&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;ol&gt;
+          &lt;li&gt;Elemento 1&lt;/li&gt;
+          &lt;li&gt;Elemento 2&lt;/li&gt;
+      &lt;/ol&gt;
+  </pre>
       </article>
 
       <article>
@@ -124,13 +127,13 @@
         <p><code>&lt;div&gt;</code> define una sección en bloque, mientras que <code>&lt;span&gt;</code> define una en
           línea:</p>
         <pre>
-                &lt;div&gt;
-                    &lt;h2&gt;Encabezado en div&lt;/h2&gt;
-                    &lt;p&gt;Párrafo en div&lt;/p&gt;
-                &lt;/div&gt;
-    
-                &lt;p&gt;Texto con &lt;span style="color:red;"&gt;span rojo&lt;/span&gt; incluido.&lt;/p&gt;
-            </pre>
+        &lt;div&gt;
+            &lt;h2&gt;Encabezado en div&lt;/h2&gt;
+            &lt;p&gt;Párrafo en div&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;p&gt;Texto con &lt;span style="color:red;"&gt;span rojo&lt;/span&gt; incluido.&lt;/p&gt;
+    </pre>
       </article>
 
       <article>
@@ -257,6 +260,14 @@
     </footer>
 
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightElement(block);
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
