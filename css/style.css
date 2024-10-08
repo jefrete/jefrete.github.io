@@ -12,7 +12,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: #ffffff;
   color: #000000;
-  padding: 2rem;
 }
 /* Estilo del encabezado */
 header {
@@ -94,6 +93,7 @@ nav ul li a:hover {
 /* Sección principal */
 main {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 10px;
@@ -317,7 +317,7 @@ Para pantallas pequeñas: móviles en modo vertical (hasta 575px)
       justify-content: center;
       text-align: center;
     }
-  }
+  
   main {
     display: flex;
     margin: 0 auto; 
@@ -616,13 +616,14 @@ footer .footer-links a {
 /* Para pantallas de escritorio medianas: entre 992px y 1199px */
 @media (min-width: 992px) and (max-width: 1699px) {
 
+  html{
+    font-size: 20px;
+  }
+  
   header {
     background-color: #FEA911;
   }
 
-  .contenido {
-    padding: 40px;
-  }
 
   iframe {
     height: 350px;
@@ -637,6 +638,10 @@ footer .footer-links a {
 /* Para pantallas grandes: desde 1200px en adelante */
 @media (min-width: 1700px) {
 
+html{
+  font-size: 20px;
+}
+
   header {
     background-color: #FEA911;
   }
@@ -645,9 +650,6 @@ footer .footer-links a {
     width: 100%;
   }
 
-  .contenido {
-    padding: 50px;
-  }
 
   iframe {
     height: 400px;
