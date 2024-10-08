@@ -624,7 +624,6 @@ footer .footer-links a {
     background-color: #FEA911;
   }
 
-
   iframe {
     height: 350px;
   }
@@ -650,6 +649,11 @@ html{
     width: 100%;
   }
 
+  article {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
   iframe {
     height: 400px;
