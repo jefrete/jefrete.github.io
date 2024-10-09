@@ -474,7 +474,11 @@ footer .footer-links a {
     max-width: 150px;
   }
 
+  .container {
+    width: 95%;
+  }
   main {
+    
     background-color: #FEA911;
     text-align: center;
     align-content: center;
@@ -518,6 +522,9 @@ footer .footer-links a {
     font-weight: 300;
   }
 
+  .container {
+    width: 95%;
+  }
   header {
     background-color: #1eff00;
   }
@@ -539,6 +546,10 @@ footer .footer-links a {
     font-size: 20px;
   }
 
+.container{
+  width: 95%;
+
+}
   header {
     background-color: #FEA911;
   }
