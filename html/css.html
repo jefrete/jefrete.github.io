@@ -43,317 +43,130 @@
     </div>
 
     <main>
+
       <section>
-        <h1>Conceptos Básicos de CSS</h1>
-        <p>En esta página vamos a aprender los fundamentos de CSS. Abajo verás ejemplos prácticos de código con sus
-          resultados en un iFrame, para que veas cómo funcionan sin afectar esta página directamente.</p>
-
-        <h2>1. Selectores CSS</h2>
-        <p>Los selectores permiten aplicar estilos a elementos HTML. Aquí tienes algunos ejemplos básicos:</p>
-
-        <code>
-        p { color: blue; } /* Cambia el color del texto de los párrafos a azul */
-        </code>
-
-        <div class="example">
-          <h3>Ejemplo:</h3>
-          <iframe srcdoc="
-        <style>
-            p { color: blue; }
-        </style>
-        <p>Este párrafo debería ser azul.</p>
-        <p>Otro párrafo azul.</p>">
-          </iframe>
-        </div>
-
-        <h2>2. Propiedades de Texto</h2>
-        <p>Las propiedades relacionadas con el texto, como el tamaño, alineación y tipo de letra, son esenciales.</p>
-
-        <code>
-        h1 { font-size: 2em; text-align: center; } /* Cambia el tamaño y alinea el título */
-        p { font-family: 'Arial', sans-serif; } /* Define la tipografía de los párrafos */
-        </code>
-
-        <div class="example">
-          <h3>Ejemplo:</h3>
-          <iframe srcdoc="
-        <style>
-            h1 { font-size: 2em; text-align: center; }
-            p { font-family: 'Arial', sans-serif; }
-        </style>
-        <h1>Título centrado</h1>
-        <p>Texto con fuente Arial.</p>">
-          </iframe>
-        </div>
-
-        <h2>3. Colores y Fondos</h2>
-        <p>CSS permite cambiar colores de texto, fondos y bordes. Aquí algunos ejemplos:</p>
-
-        <code>
-        body { background-color: #f0f0f0; }
-        p { color: #333; background-color: #e0e0e0; padding: 10px; }
-    </code>
-
-        <div class="example">
-          <h3>Ejemplo:</h3>
-          <iframe srcdoc="
-        <style>
-            body { background-color: #f0f0f0; }
-            p { color: #333; background-color: #e0e0e0; padding: 10px; }
-        </style>
-        <p>Texto con fondo gris claro y color de texto oscuro.</p>">
-          </iframe>
-        </div>
-
-        <h2>4. Bordes, Márgenes y Paddings</h2>
-        <p>Los márgenes, bordes y paddings son propiedades clave para la disposición de los elementos.</p>
-
-        <code>
-        div {
-            border: 2px solid #333;
-            padding: 10px;
-            margin: 20px;
-        }
-        </code>
-
-        <div class="example">
-          <h3>Ejemplo:</h3>
-          <iframe srcdoc="
-        <style>
-            div { 
-                border: 2px solid #333; 
-                padding: 10px;
-                margin: 20px;
-            }
-        </style>
-        <div>Un div con margen y padding aplicado.</div>">
-          </iframe>
-        </div>
-
-        <h2>5. Modelo de Caja</h2>
-        <p>El modelo de caja en CSS define cómo se comportan los elementos en cuanto a ancho, alto, márgenes y relleno.
-        </p>
-
-        <code>
-        .box {
-            width: 200px;
-            height: 100px;
-            padding: 20px;
-            border: 5px solid #333;
-            margin: 10px;
-        }
-        </code>
-
-        <div class="example">
-          <h3>Ejemplo:</h3>
-          <iframe srcdoc="
-        <style>
-            .box {
-                width: 200px;
-                height: 100px;
-                padding: 20px;
-                border: 5px solid #333;
-                margin: 10px;
-            }
-        </style>
-        <div class='box'>Caja con modelo de caja aplicado.</div>">
-          </iframe>
-        </div>
-
-        <h2>6. Layout con Flexbox</h2>
-        <p>Flexbox es una técnica muy poderosa para crear layouts flexibles y alineaciones avanzadas.</p>
-
-        <code>
-        .container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .item {
-            background-color: #ddd;
-            padding: 20px;
-            width: 100px;
-        }
-    </code>
-
-        <div class="example">
-          <h3>Ejemplo:</h3>
-          <iframe srcdoc="
-        <style>
-            .container {
-                display: flex;
-                justify-content: space-between;
-            }
-            .item {
-                background-color: #ddd;
-                padding: 20px;
-                width: 100px;
-            }
-        </style>
-        <div class='container'>
-            <div class='item'>Item 1</div>
-            <div class='item'>Item 2</div>
-            <div class='item'>Item 3</div>
-        </div>">
-          </iframe>
-        </div>
-
-        <h2>7. Buenas Prácticas</h2>
-        <p>Al escribir CSS, es importante seguir buenas prácticas como el uso de nombres de clases descriptivos, separar
-          el estilo del contenido y evitar el uso excesivo de IDs como selectores.</p>
-
-          <h2>4TO A - CPEM 7</h2>
-
-          <h3>HTML</h3>
-          <p><strong>Introducción</strong></p>
-          <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Utiliza etiquetas para
-            estructurar el contenido en un documento que puede ser interpretado por los navegadores.</p>
-
-          <h4>Estructura Básica de un Documento HTML</h4>
-          <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html lang="es"&gt;
-  &lt;head&gt;
-      &lt;meta charset="UTF-8"&gt;
-      &lt;title&gt;Título de la Página&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-      &lt;!-- Contenido va aquí --&gt;
-  &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
-
-          <p><strong>Crear la estructura básica de un documento HTML5 utilizando atajos en los editores de
-              código:</strong></p>
-          <ul>
-            <li>En Visual Studio Code o Sublime Text:</li>
-            <li>Escribe <code>html:5</code> y presiona <code>Tab</code>.</li>
-            <li>Escribe <code>!</code> y presiona <code>Tab</code>.</li>
-          </ul>
-
-          <h4>Comentarios en HTML</h4>
-          <p>Los comentarios en HTML se utilizan para dejar notas o explicaciones en el código que no serán visibles en
-            el
-            navegador. Son útiles para documentar el código y facilitar su comprensión.</p>
-          <pre><code>&lt;!-- Este es un comentario en HTML --&gt;
-  &lt;p&gt;Este es un párrafo.&lt;/p&gt;
-  &lt;!--
-    Este es un comentario
-    que abarca múltiples
-    líneas.
-  --&gt;</code></pre>
-
-          <h4>Etiquetas Básicas de HTML</h4>
-          <ul>
-            <li><strong>Encabezados</strong> (de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>)</li>
-            <li><code>&lt;p&gt;</code> - Define un párrafo.</li>
-            <li><code>&lt;a&gt;</code> - Define un hipervínculo usando el atributo <code>href</code>.</li>
-            <li><code>&lt;img&gt;</code> - Define una imagen, con atributos <code>src</code> y <code>alt</code>.</li>
-            <li><code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code> - Listas no ordenadas y ordenadas respectivamente.
-            </li>
-            <li><code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> - Definen divisiones y secciones en línea.</li>
-            <li><code>&lt;form&gt;</code> - Define un formulario con campos de entrada.</li>
-            <li><code>&lt;table&gt;</code> - Define una tabla con filas (<code>&lt;tr&gt;</code>) y celdas
-              (<code>&lt;td&gt;</code> y <code>&lt;th&gt;</code>).</li>
-          </ul>
-
-          <h4>Atributos Globales</h4>
-          <ul>
-            <li><strong>id:</strong> Define un identificador único.</li>
-            <li><strong>class:</strong> Define una o varias clases.</li>
-            <li><strong>style:</strong> Define estilos CSS en línea.</li>
-            <li><strong>title:</strong> Proporciona un texto emergente adicional.</li>
-          </ul>
-
-          <h4>Etiquetas Semánticas</h4>
-          <p>Las etiquetas semánticas proporcionan un significado claro sobre la estructura del contenido. Algunas de
-            ellas son:</p>
-          <ul>
-            <li><code>&lt;header&gt;</code> - Encabezado de una página o sección.</li>
-            <li><code>&lt;nav&gt;</code> - Sección de navegación.</li>
-            <li><code>&lt;section&gt;</code> - Sección del documento.</li>
-            <li><code>&lt;article&gt;</code> - Contenido independiente.</li>
-            <li><code>&lt;aside&gt;</code> - Contenido adicional o complementario.</li>
-            <li><code>&lt;footer&gt;</code> - Pie de página.</li>
-          </ul>
-
-          <h4>Buenas Prácticas</h4>
-          <ol>
-            <li>Usa etiquetas semánticas para mejorar accesibilidad y SEO.</li>
-            <li>Cierra correctamente las etiquetas.</li>
-            <li>Escribe un código limpio y bien estructurado.</li>
-            <li>Documenta el código con comentarios.</li>
-            <li>Valida tu HTML en servicios como el <a href="https://validator.w3.org/" target="_blank">W3C Markup
-                Validation Service</a>.</li>
-          </ol>
-
-          <h3>CSS</h3>
-          <p><strong>Introducción</strong></p>
-          <p>CSS (Cascading Style Sheets) es el lenguaje utilizado para describir la presentación de documentos HTML.
-            CSS
-            controla el diseño y el formato de las páginas web.</p>
-
-          <h4>Comentarios en CSS</h4>
-          <p>Los comentarios en CSS se utilizan de manera similar a HTML. Se inician con <code>/*</code> y terminan con
-            <code>*/</code>.
+        <h1>Cuadernillo de CSS y Flexbox</h1>
+        
+        <!-- Sección de Introducción a CSS -->
+        <article>
+          <h2>Introducción a CSS</h2>
+          <p>
+            CSS (Cascading Style Sheets) es el lenguaje utilizado para describir la presentación de documentos HTML. Con CSS,
+            puedes controlar el diseño y el formato de múltiples páginas web a la vez, lo que te permite definir cómo los
+            elementos HTML deben aparecer en pantalla, impresos, o en otros medios.
           </p>
-          <pre><code>/* Este es un comentario en CSS */
-  body {
-    font-family: Arial, sans-serif;
-  }</code></pre>
-
-          <h4>Cómo Enlazar CSS a un Documento HTML</h4>
-          <p>El método recomendado es enlazar un archivo CSS externo con la etiqueta <code>&lt;link&gt;</code> en el
-            <code>&lt;head&gt;</code> del documento HTML.
-          </p>
-          <pre><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
-
-          <h4>Selectores Básicos de CSS</h4>
+        </article>
+    
+        <!-- Propiedades y valores CSS -->
+        <article>
+          <h3>Propiedades y valores CSS</h3>
+          <p>Algunos ejemplos de propiedades CSS comunes y sus valores:</p>
           <ul>
-            <li><strong>Selector de Elemento:</strong> Aplica estilos a todos los elementos de un tipo.</li>
-            <li><strong>Selector de Clase:</strong> Aplica estilos a elementos con una clase específica, usando
-              <code>.</code> seguido del nombre de la clase.
+            <li><strong>Color</strong>: Ajusta el color de fondo, texto, bordes, etc.
+              <pre><code>color: #ff0000;</code></pre>
             </li>
-            <li><strong>Selector de ID:</strong> Aplica estilos a un elemento con un ID específico, usando
-              <code>#</code>.
+            <li><strong>Fuente</strong>: Define la familia, tamaño, estilo y peso de la fuente.
+              <pre><code>font-family: Arial; font-size: 16px;</code></pre>
+            </li>
+            <li><strong>Espaciado</strong>: Controla el margen, relleno y espacio entre líneas.
+              <pre><code>margin: 10px; padding: 5px;</code></pre>
+            </li>
+            <li><strong>Bordes</strong>: Define el estilo, color y ancho de los bordes.
+              <pre><code>border: 2px solid #000;</code></pre>
             </li>
           </ul>
-
-          <h4>Buenas Prácticas en CSS</h4>
-          <ol>
-            <li>Usa archivos CSS externos para mantener el HTML limpio.</li>
-            <li>Utiliza nombres de clases descriptivos.</li>
-            <li>Comenta el código CSS para explicar secciones complejas.</li>
-            <li>Organiza el CSS en bloques lógicos y usa unidades relativas como <code>em</code> o <code>rem</code>.
+        </article>
+    
+        <!-- Modelo de caja -->
+        <article>
+          <h3>Modelo de Caja</h3>
+          <p>
+            El <strong>modelo de caja CSS</strong> es esencial para entender cómo los elementos son visualizados en la pantalla.
+            Cada elemento HTML se compone de cuatro áreas:
+          </p>
+          <ul>
+            <li><strong>Contenido</strong>: Lo que se muestra (texto, imágenes).</li>
+            <li><strong>Relleno (padding)</strong>: Espacio entre el contenido y el borde.</li>
+            <li><strong>Borde (border)</strong>: Delimita el área del contenido.</li>
+            <li><strong>Margen (margin)</strong>: Espacio entre el borde y otros elementos.</li>
+          </ul>
+          <pre><code>div { margin: 10px; padding: 5px; border: 2px solid #000; }</code></pre>
+        </article>
+      </section>
+    
+      <!-- Sección de Introducción a Flexbox -->
+      <section>
+        <article>
+          <h2>Introducción a Flexbox</h2>
+          <p>
+            <strong>Flexbox</strong> es un modelo de diseño en CSS que permite organizar y alinear elementos dentro de un contenedor
+            de manera flexible, adaptándose a diferentes resoluciones y tamaños de pantalla. Es especialmente útil para crear
+            <strong>layouts responsivos</strong> y <strong>dinámicos</strong>.
+          </p>
+        </article>
+    
+        <!-- Principios de Flexbox -->
+        <article>
+          <h3>Principios de Flexbox</h3>
+          <p>Flexbox se basa en dos componentes principales:</p>
+          <ul>
+            <li><strong>Contenedor Flex (flex container)</strong>: El contenedor que define el contexto Flexbox.</li>
+            <li><strong>Elementos Flex (flex items)</strong>: Los elementos hijos dentro del contenedor que se alinean de manera flexible.</li>
+          </ul>
+        </article>
+    
+        <!-- Propiedades clave de Flexbox -->
+        <article>
+          <h3>Propiedades clave de Flexbox</h3>
+          <ul>
+            <li><strong>display: flex</strong>: Convierte un contenedor en un contenedor flex.
+              <pre><code>.container { display: flex; }</code></pre>
             </li>
-          </ol>
-
-          <code>
-        /* Buena práctica de nombres */
-        .boton-primario {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-        }
-      </code>
-
-          <div class="example">
-            <h3>Ejemplo:</h3>
-            <iframe srcdoc="
-        <style>
-            .boton-primario {
-                background-color: #007BFF;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-            }
-        </style>
-        <button class='boton-primario'>Botón Primario</button>">
-            </iframe>
-          </div>
-        </section>
-
+            <li><strong>flex-direction</strong>: Define la dirección en la que los elementos hijos se organizan.
+              <pre><code>.container { flex-direction: row; }</code></pre>
+            </li>
+            <li><strong>justify-content</strong>: Controla la alineación a lo largo del eje principal.
+              <pre><code>.container { justify-content: space-between; }</code></pre>
+            </li>
+            <li><strong>align-items</strong>: Controla la alineación a lo largo del eje transversal.
+              <pre><code>.container { align-items: center; }</code></pre>
+            </li>
+            <li><strong>flex-grow, flex-shrink, flex-basis</strong>: Controlan el tamaño de los elementos flexibles.
+              <pre><code>.item { flex: 1 1 100px; }</code></pre>
+            </li>
+          </ul>
+        </article>
+      </section>
+    
+      <!-- Ejemplos de Layouts con Flexbox -->
+      <section>
+        <article>
+          <h3>Ejemplos de Layouts con Flexbox</h3>
+          <h4>Ejemplo 1: Usando <code>flex-basis</code></h4>
+          <p>Este ejemplo muestra cómo dividir un contenedor en dos columnas de igual tamaño usando <code>flex-basis</code>:</p>
+          <pre><code>.container { display: flex; flex-wrap: wrap; } .column { flex-basis: 50%; padding: 10px; background-color: lightblue; }</code></pre>
+    
+          <h4>Ejemplo 2: Usando <code>width</code> y porcentajes</h4>
+          <p>Este ejemplo muestra cómo crear columnas flexibles con porcentajes:</p>
+          <pre><code>.container { display: flex; flex-wrap: wrap; } .column { width: 50%; padding: 10px; background-color: lightgreen; }</code></pre>
+        </article>
+      </section>
+    
+      <!-- Buenas prácticas -->
+      <section>
+        <article>
+          <h3>Buenas Prácticas con Flexbox</h3>
+          <ul>
+            <li><strong>Mantén la estructura semántica</strong>: Usa etiquetas semánticas como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, y <code>&lt;footer&gt;</code>.</li>
+            <li><strong>Uso de porcentajes</strong>: Utiliza <code>flex-basis</code> o <code>width</code> en porcentajes para que los contenedores sean más flexibles y responsivos.</li>
+            <li><strong>Combina Flexbox con media queries</strong>: Usa <strong>media queries</strong> para ajustar el diseño en diferentes tamaños de pantalla.</li>
+            <li><strong>Evita dimensiones fijas</strong>: Usa unidades flexibles como <code>%</code>, <code>em</code>, o <code>rem</code> en lugar de <code>px</code>.</li>
+          </ul>
+        </article>
+      </section>
+    
     </main>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-content">
