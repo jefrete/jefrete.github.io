@@ -120,6 +120,10 @@ nav ul li a:hover {
   font-size: 1.5rem;
 }
 
+li{
+  list-style: none;
+}
+
 /* Banner */
 .banner {
   width: 100%;
@@ -153,10 +157,7 @@ main {
 
   gap: 1rem;
   font-size: 1rem;
-  background-color: #FEA911;
-
-  background: rgb(209, 89, 49);
-  background: linear-gradient(90deg, rgba(209, 89, 49, 1) 0%, rgba(223, 148, 19, 1) 20%, rgba(254, 239, 17, 1) 55%, rgba(0, 194, 255, 1) 100%);
+  background-color: #111111;
 
   margin: 0 auto;
   padding: 1rem;
@@ -208,7 +209,7 @@ aside {
   flex-basis: 100%;
   text-align: center;
   padding: 1rem;
-  background-color: #0f0f0fcc;
+  background-color: black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-size: 1.5rem;
   border-radius: 10px;
@@ -235,14 +236,15 @@ aside ul li {
 }
 
 aside ul li a {
-  color: rgb(255, 77, 0);
+  color: rgb(255, 225, 0);
   text-decoration: underline;
   transition: color 0.5s ease;
 }
 
 aside ul li a:hover {
-  color: #4caf50;
+  color: #dc0a0a;
   transition: color 0.5s ease;
+  font-size: 1.7rem;
 
 }
 
@@ -577,11 +579,7 @@ flex-direction: column;
     background-color: #1111fe;
   }
 
-  iframe {
-    height: 350px;
-  }
-
-  nav ul {
+   nav ul {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -624,10 +622,6 @@ flex-direction: column;
 
   .hamburger {
     display: none;
-  }
-
-  .banner {
-    width: 100%;
   }
 
   nav ul {

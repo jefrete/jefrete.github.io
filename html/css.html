@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Guía Básica de CSS</title>
-  
+
   <link rel="stylesheet" href="../css/style.css">
 
 </head>
@@ -40,23 +40,26 @@
     <div class="banner">
       <!-- Banner con imagen de fondo -->
     </div>
-          
-      <div class="contenido-principal-css">
+
+    <div class="contenido-principal-css">
       <!-- Sección de Introducción a CSS -->
       <main>
-              <section>
+        <section>
           <h1>Introducción a CSS</h1>
           <article>
-              <h2>¿Qué es CSS?</h2>
-              <p>
-                  CSS (Cascading Style Sheets) es el lenguaje utilizado para describir la presentación de documentos HTML. CSS controla el diseño y el formato de múltiples páginas web a la vez, permitiendo definir cómo los elementos HTML deben aparecer en pantalla, impresos o en otros medios.
-              </p>
+            <h2>¿Qué es CSS?</h2>
+            <p>
+              CSS (Cascading Style Sheets) es el lenguaje utilizado para describir la presentación de documentos HTML.
+              CSS controla el diseño y el formato de múltiples páginas web a la vez, permitiendo definir cómo los
+              elementos HTML deben aparecer en pantalla, impresos o en otros medios.
+            </p>
           </article>
-  
+
           <article>
-              <h2>Comentarios en CSS</h2>
-              <p>Los comentarios en CSS se utilizan de manera similar a los de HTML, para agregar notas o explicaciones en el código CSS. Los comentarios comienzan con <code>/*</code> y terminan con <code>*/</code>.</p>
-              <pre><code>
+            <h2>Comentarios en CSS</h2>
+            <p>Los comentarios en CSS se utilizan de manera similar a los de HTML, para agregar notas o explicaciones en
+              el código CSS. Los comentarios comienzan con <code>/*</code> y terminan con <code>*/</code>.</p>
+            <pre><code>
                   /* Este es un comentario en CSS */
                   body {
                       font-family: Arial, sans-serif;
@@ -68,11 +71,12 @@
                   */
               </code></pre>
           </article>
-  
+
           <article>
-              <h2>Cómo Enlazar CSS a un Documento HTML</h2>
-              <p>Para enlazar un archivo CSS externo, utiliza la etiqueta <code>&lt;link&gt;</code> dentro del <code>&lt;head&gt;</code> de tu documento HTML:</p>
-              <pre><code>
+            <h2>Cómo Enlazar CSS a un Documento HTML</h2>
+            <p>Para enlazar un archivo CSS externo, utiliza la etiqueta <code>&lt;link&gt;</code> dentro del
+              <code>&lt;head&gt;</code> de tu documento HTML:</p>
+            <pre><code>
                   &lt;!DOCTYPE html&gt;
                   &lt;html lang="es"&gt;
                   &lt;head&gt;
@@ -86,11 +90,12 @@
                   &lt;/html&gt;
               </code></pre>
           </article>
-  
+
           <article>
-              <h2>CSS Interno (Mala Práctica)</h2>
-              <p>Incluir CSS directamente en el archivo HTML no es recomendable. Se puede usar la etiqueta <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code>:</p>
-              <pre><code>
+            <h2>CSS Interno (Mala Práctica)</h2>
+            <p>Incluir CSS directamente en el archivo HTML no es recomendable. Se puede usar la etiqueta
+              <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code>:</p>
+            <pre><code>
                   &lt;!DOCTYPE html&gt;
                   &lt;html lang="es"&gt;
                   &lt;head&gt;
@@ -109,30 +114,31 @@
                   &lt;/html&gt;
               </code></pre>
           </article>
-  
+
           <article>
-              <h2>CSS en Línea</h2>
-              <p>Puedes aplicar estilos directamente a un elemento HTML utilizando el atributo <code>style</code>:</p>
-              <pre><code>
+            <h2>CSS en Línea</h2>
+            <p>Puedes aplicar estilos directamente a un elemento HTML utilizando el atributo <code>style</code>:</p>
+            <pre><code>
                   &lt;p style="color: red;"&gt;Este es un párrafo con estilo en línea.&lt;/p&gt;
               </code></pre>
           </article>
-  
+
           <!-- Sección de Selectores Básicos en CSS -->
           <article>
-              <h2>Selectores Básicos de CSS</h2>
-              
-              <h3>Selectores de Elemento</h3>
-              <p>Aplica estilos a todos los elementos de un tipo específico.</p>
-              <pre><code>
+            <h2>Selectores Básicos de CSS</h2>
+
+            <h3>Selectores de Elemento</h3>
+            <p>Aplica estilos a todos los elementos de un tipo específico.</p>
+            <pre><code>
                   p {
                       color: blue;
                   }
               </code></pre>
-  
-              <h3>Selectores de Clase</h3>
-              <p>Aplica estilos a elementos con una clase específica. Utiliza el punto (.) seguido del nombre de la clase.</p>
-              <pre><code>
+
+            <h3>Selectores de Clase</h3>
+            <p>Aplica estilos a elementos con una clase específica. Utiliza el punto (.) seguido del nombre de la clase.
+            </p>
+            <pre><code>
                   <!-- HTML -->
                   &lt;p class="intro"&gt;Este es un párrafo con clase "intro".&lt;/p&gt;
   
@@ -141,10 +147,11 @@
                       font-size: 20px;
                   }
               </code></pre>
-  
-              <h3>Selectores de ID</h3>
-              <p>Aplica estilos a un elemento con un ID específico. Utiliza la almohadilla (#) seguida del nombre del ID.</p>
-              <pre><code>
+
+            <h3>Selectores de ID</h3>
+            <p>Aplica estilos a un elemento con un ID específico. Utiliza la almohadilla (#) seguida del nombre del ID.
+            </p>
+            <pre><code>
                   <!-- HTML -->
                   &lt;div id="header"&gt;Este es el encabezado.&lt;/div&gt;
   
@@ -154,30 +161,27 @@
                       color: white;
                   }
               </code></pre>
-          </article>
-  
-          <!-- Buenas Prácticas en CSS -->
-          <article>
-              <h2>Buenas Prácticas en CSS</h2>
-              <ol>
-                  <li>Usa Archivos CSS Externos: Mantén tu HTML limpio y separado de la lógica de estilos.</li>
-                  <li>Nombres de Clases Descriptivos: Usa nombres de clases claros y significativos.</li>
-                  <pre><code>
+
+            <h2>Buenas Prácticas en CSS</h2>
+            <ol>
+              <li>Usa Archivos CSS Externos: Mantén tu HTML limpio y separado de la lógica de estilos.</li>
+              <li>Nombres de Clases Descriptivos: Usa nombres de clases claros y significativos.</li>
+              <pre><code>
                       .boton-primario {
                           background-color: blue;
                           color: white;
                       }
                   </code></pre>
-                  <li>Comentarios en CSS: Utiliza comentarios para explicar secciones complejas.</li>
-                  <pre><code>
+              <li>Comentarios en CSS: Utiliza comentarios para explicar secciones complejas.</li>
+              <pre><code>
                       /* Estilos para el botón principal */
                       .boton-primario {
                           background-color: blue;
                           color: white;
                       }
                   </code></pre>
-                  <li>Estructura y Organización: Organiza tus reglas CSS en bloques lógicos.</li>
-                  <pre><code>
+              <li>Estructura y Organización: Organiza tus reglas CSS en bloques lógicos.</li>
+              <pre><code>
                       /* Estilos para el cuerpo */
                       body {
                           font-family: Arial, sans-serif;
@@ -191,8 +195,9 @@
                           padding: 10px;
                       }
                   </code></pre>
-                  <li>Usa Unidades Relativas: Prefiere unidades relativas (%, em, rem) sobre unidades absolutas (px) para una mejor adaptación a diferentes pantallas.</li>
-                  <pre><code>
+              <li>Usa Unidades Relativas: Prefiere unidades relativas (%, em, rem) sobre unidades absolutas (px) para
+                una mejor adaptación a diferentes pantallas.</li>
+              <pre><code>
                       body {
                           font-size: 16px;
                       }
@@ -200,73 +205,65 @@
                           font-size: 1.2em; /* 1.2 veces el tamaño de la fuente del cuerpo */
                       }
                   </code></pre>
-              </ol>
-          </article>
-  
-          <!-- Malas Prácticas en CSS -->
-          <article>
-              <h2>Malas Prácticas en CSS</h2>
-              <ol>
-                  <li>Evita el CSS en Línea: Es difícil de mantener y no reutilizable.</li>
-                  <pre><code>
+            </ol>
+
+            <h2>Malas Prácticas en CSS</h2>
+            <ol>
+              <li>Evita el CSS en Línea: Es difícil de mantener y no reutilizable.</li>
+              <pre><code>
                       <!-- Malo -->
                       &lt;p style="color: red;"&gt;Este es un párrafo con estilo en línea.&lt;/p&gt;
                   </code></pre>
-                  <li>No Abuses de los Selectores ID: Son muy específicos y pueden causar problemas de mantenibilidad.</li>
-                  <pre><code>
+              <li>No Abuses de los Selectores ID: Son muy específicos y pueden causar problemas de mantenibilidad.</li>
+              <pre><code>
                       /* Malo */
                       header {
                           background-color: red;
                       }
                   </code></pre>
-              </ol>
+            </ol>
           </article>
-      </section>
-  
-      <!-- Recursos adicionales -->
-      <section>
-          <h2>Recursos Adicionales</h2>
-          <ul>
+          <article>
+            <h2>Recursos Adicionales</h2>
+            <ul>
               <li><a href="https://www.w3schools.com/css/">W3Schools: Tutorial CSS</a></li>
               <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">MDN Web Docs: Guía CSS</a></li>
-          </ul>
-      </section>
- 
-    <!-- Introducción a CSS -->
-    <section>
-        <h1>Introducción a CSS</h1>
-        <article>
-            <h2>¿Qué es CSS?</h2>
-            <p>
-                CSS o <strong>Cascading Style Sheets</strong>, es una hoja de estilo que permite a los diseñadores definir el aspecto de un documento HTML. Este lenguaje de diseño es fundamental para crear páginas web atractivas y profesionales.
-            </p>
-            <p><em>by Julian E. Frete Iommi</em></p>
-        </article>
+            </ul>
 
-        <article>
-            <h2>Sintaxis y estructura de CSS</h2>
-            <p>
-                CSS se escribe en una sintaxis sencilla con reglas que definen la apariencia de los elementos HTML. Una regla contiene un selector, que indica el elemento a estilizar, y una declaración con propiedades y valores para modificar su diseño.
-            </p>
-            <pre><code>
+              <h2>¿Qué es CSS?</h2>
+              <p>
+                CSS o <strong>Cascading Style Sheets</strong>, es una hoja de estilo que permite a los diseñadores
+                definir el aspecto de un documento HTML. Este lenguaje de diseño es fundamental para crear páginas web
+                atractivas y profesionales.
+              </p>
+
+            <article>
+              <h2>Sintaxis y estructura de CSS</h2>
+              <p>
+                CSS se escribe en una sintaxis sencilla con reglas que definen la apariencia de los elementos HTML. Una
+                regla contiene un selector, que indica el elemento a estilizar, y una declaración con propiedades y
+                valores para modificar su diseño.
+              </p>
+              <pre><code>
                 /* Sintaxis Básica */
                 Selector {
                     Propiedad: Valor;
                 }
             </code></pre>
-            <ul>
+              <ul>
                 <li><strong>Selector</strong>: Identifica los elementos HTML a estilizar.</li>
                 <li><strong>Propiedad</strong>: Define el aspecto del elemento (color, tamaño, margen, etc.).</li>
                 <li><strong>Valor</strong>: Especifica el valor de la propiedad.</li>
-            </ul>
-        </article>
+              </ul>
+            </article>
 
-        <article>
-            <h2>Selectores CSS</h2>
-            <p>
-                Los selectores CSS determinan a qué elementos HTML se aplican las reglas de estilo. Hay diversos tipos de selectores con diferentes niveles de especificidad.
-            </p>
-            <ul>
+            <article>
+              <h2>Selectores CSS</h2>
+              <p>
+                Los selectores CSS determinan a qué elementos HTML se aplican las reglas de estilo. Hay diversos tipos
+                de selectores con diferentes niveles de especificidad.
+              </p>
+              <ul>
                 <li><strong>1. Selectores de Elemento:</strong> Se aplican a todos los elementos del mismo tipo.</li>
                 <pre><code>
                     /* Ejemplo: */
@@ -275,7 +272,8 @@
                     }
                 </code></pre>
 
-                <li><strong>2. Selectores de Clase:</strong> Se aplican a elementos que comparten una clase específica.</li>
+                <li><strong>2. Selectores de Clase:</strong> Se aplican a elementos que comparten una clase específica.
+                </li>
                 <pre><code>
                     /* Ejemplo: */
                     .nombre-clase {
@@ -298,104 +296,119 @@
                         font-size: 24px;
                     }
                 </code></pre>
-            </ul>
-        </article>
+              </ul>
+            </article>
 
-        <!-- Propiedades y Valores CSS -->
-        <article>
-            <h2>Propiedades y valores CSS</h2>
-            <p>
-                Las propiedades CSS definen las características de los elementos HTML, como el color, el tamaño de fuente o el margen. Los valores especifican los datos concretos que se aplicarán a cada propiedad.
-            </p>
-            <ul>
-                <li><strong>Color:</strong> Ajusta el color de fondo, texto o bordes. Ejemplo: <code>color: #ff0000;</code></li>
-                <li><strong>Fuente:</strong> Define la familia, el tamaño y el estilo de la fuente. Ejemplo: <code>font-family: Arial; font-size: 16px;</code></li>
-                <li><strong>Espaciado:</strong> Controla el margen, el relleno y el espacio entre líneas. Ejemplo: <code>margin: 10px; padding: 5px;</code></li>
-                <li><strong>Bordes:</strong> Define el estilo, color y ancho de los bordes. Ejemplo: <code>border: 2px solid #000;</code></li>
-            </ul>
-        </article>
+            <!-- Propiedades y Valores CSS -->
+            <article>
+              <h2>Propiedades y valores CSS</h2>
+              <p>
+                Las propiedades CSS definen las características de los elementos HTML, como el color, el tamaño de
+                fuente o el margen. Los valores especifican los datos concretos que se aplicarán a cada propiedad.
+              </p>
+              <ul>
+                <li><strong>Color:</strong> Ajusta el color de fondo, texto o bordes. Ejemplo:
+                  <code>color: #ff0000;</code></li>
+                <li><strong>Fuente:</strong> Define la familia, el tamaño y el estilo de la fuente. Ejemplo:
+                  <code>font-family: Arial; font-size: 16px;</code></li>
+                <li><strong>Espaciado:</strong> Controla el margen, el relleno y el espacio entre líneas. Ejemplo:
+                  <code>margin: 10px; padding: 5px;</code></li>
+                <li><strong>Bordes:</strong> Define el estilo, color y ancho de los bordes. Ejemplo:
+                  <code>border: 2px solid #000;</code></li>
+              </ul>
+            </article>
 
-        <!-- Modelo de Caja CSS -->
-        <article>
-            <h2>Modelo de caja CSS</h2>
-            <p>
-                El <strong>modelo de caja CSS</strong> es un concepto fundamental que describe cómo se organizan los elementos en el diseño web. Cada elemento HTML se visualiza como una caja con diferentes componentes que definen su espacio y apariencia.
-            </p>
-            <ul>
+            <!-- Modelo de Caja CSS -->
+            <article>
+              <h2>Modelo de caja CSS</h2>
+              <p>
+                El <strong>modelo de caja CSS</strong> es un concepto fundamental que describe cómo se organizan los
+                elementos en el diseño web. Cada elemento HTML se visualiza como una caja con diferentes componentes que
+                definen su espacio y apariencia.
+              </p>
+              <ul>
                 <li><strong>Contenido:</strong> El contenido real del elemento, como texto, imágenes o videos.</li>
                 <li><strong>Relleno:</strong> Espacio entre el contenido y el borde del elemento.</li>
                 <li><strong>Borde:</strong> Línea que delimita el elemento, con estilo, color y ancho.</li>
                 <li><strong>Margen:</strong> Espacio entre el elemento y otros elementos adyacentes.</li>
-            </ul>
-        </article>
+              </ul>
+            </article>
 
-        <!-- Estilos de Texto y Fuentes en CSS -->
-        <article>
-            <h2>Estilos de texto y fuentes en CSS</h2>
-            <p>
-                Las propiedades de texto y fuente en CSS permiten personalizar la apariencia del texto en las páginas web. Se puede controlar la familia de fuente, el tamaño, el estilo, el peso, el color, la alineación y otros aspectos del texto.
-            </p>
-            <table>
+            <!-- Estilos de Texto y Fuentes en CSS -->
+            <article>
+              <h2>Estilos de texto y fuentes en CSS</h2>
+              <p>
+                Las propiedades de texto y fuente en CSS permiten personalizar la apariencia del texto en las páginas
+                web. Se puede controlar la familia de fuente, el tamaño, el estilo, el peso, el color, la alineación y
+                otros aspectos del texto.
+              </p>
+              <table>
                 <thead>
-                    <tr>
-                        <th>Propiedad</th>
-                        <th>Descripción</th>
-                    </tr>
+                  <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>font-family</td>
-                        <td>Define la familia de fuente a utilizar.</td>
-                    </tr>
-                    <tr>
-                        <td>font-size</td>
-                        <td>Establece el tamaño de la fuente.</td>
-                    </tr>
-                    <tr>
-                        <td>font-weight</td>
-                        <td>Controla el grosor de la fuente.</td>
-                    </tr>
-                    <tr>
-                        <td>color</td>
-                        <td>Define el color del texto.</td>
-                    </tr>
-                    <tr>
-                        <td>text-align</td>
-                        <td>Alinea el texto dentro del elemento.</td>
-                    </tr>
-                    <tr>
-                        <td>line-height</td>
-                        <td>Ajusta el espacio entre líneas de texto.</td>
-                    </tr>
+                  <tr>
+                    <td>font-family</td>
+                    <td>Define la familia de fuente a utilizar.</td>
+                  </tr>
+                  <tr>
+                    <td>font-size</td>
+                    <td>Establece el tamaño de la fuente.</td>
+                  </tr>
+                  <tr>
+                    <td>font-weight</td>
+                    <td>Controla el grosor de la fuente.</td>
+                  </tr>
+                  <tr>
+                    <td>color</td>
+                    <td>Define el color del texto.</td>
+                  </tr>
+                  <tr>
+                    <td>text-align</td>
+                    <td>Alinea el texto dentro del elemento.</td>
+                  </tr>
+                  <tr>
+                    <td>line-height</td>
+                    <td>Ajusta el espacio entre líneas de texto.</td>
+                  </tr>
                 </tbody>
-            </table>
-        </article>
-    </section>
+              </table>
+            </article>
+        </section>
 
-    <!-- Flexbox en CSS -->
-    <section>
-        <h1>Flexbox en CSS</h1>
-        <article>
+        <!-- Flexbox en CSS -->
+        <section>
+          <h1>Flexbox en CSS</h1>
+          <article>
             <h2>¿Qué es Flexbox?</h2>
             <p>
-                Flexbox es un modelo de diseño en CSS que proporciona un método flexible y potente para organizar y alinear elementos dentro de un contenedor.
+              Flexbox es un modelo de diseño en CSS que proporciona un método flexible y potente para organizar y
+              alinear elementos dentro de un contenedor.
             </p>
-        </article>
+          </article>
 
-        <article>
+          <article>
             <h2>Principales propiedades de Flexbox</h2>
             <ul>
-                <li><strong>Alineación:</strong> Controla la alineación de los elementos dentro del contenedor, tanto vertical como horizontalmente.</li>
-                <li><strong>Dirección:</strong> Determina la dirección del flujo de los elementos dentro del contenedor, como fila o columna.</li>
-                <li><strong>Justificación:</strong> Distribuye el espacio entre los elementos dentro del contenedor, creando un diseño equilibrado.</li>
-                <li><strong>Orden:</strong> Permite cambiar el orden de los elementos sin modificar el código HTML.</li>
+              <li><strong>Alineación:</strong> Controla la alineación de los elementos dentro del contenedor, tanto
+                vertical como horizontalmente.</li>
+              <li><strong>Dirección:</strong> Determina la dirección del flujo de los elementos dentro del contenedor,
+                como fila o columna.</li>
+              <li><strong>Justificación:</strong> Distribuye el espacio entre los elementos dentro del contenedor,
+                creando un diseño equilibrado.</li>
+              <li><strong>Orden:</strong> Permite cambiar el orden de los elementos sin modificar el código HTML.</li>
             </ul>
-        </article>
+          </article>
 
-        <article>
+          <article>
             <h2>Alineación en Flexbox</h2>
             <p>
-                Flexbox permite alinear elementos dentro de un contenedor de manera flexible. La propiedad <code>align-items</code> controla la alineación vertical, mientras que <code>justify-content</code> se encarga de la alineación horizontal.
+              Flexbox permite alinear elementos dentro de un contenedor de manera flexible. La propiedad
+              <code>align-items</code> controla la alineación vertical, mientras que <code>justify-content</code> se
+              encarga de la alineación horizontal.
             </p>
             <pre><code>
                 .contenedor {
@@ -404,25 +417,27 @@
                     align-items: flex-start; /* Alineación vertical */
                 }
             </code></pre>
-        </article>
+          </article>
 
-        <article>
+          <article>
             <h2>Dirección de Flexbox</h2>
             <p>
-                Flexbox permite controlar la dirección del flujo de los elementos dentro de un contenedor. Esto se logra mediante la propiedad <code>flex-direction</code>.
+              Flexbox permite controlar la dirección del flujo de los elementos dentro de un contenedor. Esto se logra
+              mediante la propiedad <code>flex-direction</code>.
             </p>
             <ul>
-                <li><strong>row:</strong> Los elementos se disponen en una fila horizontal.</li>
-                <li><strong>column:</strong> Los elementos se disponen en una columna vertical.</li>
-                <li><strong>row-reverse:</strong> Los elementos se disponen en una fila horizontal inversa.</li>
-                <li><strong>column-reverse:</strong> Los elementos se disponen en una columna vertical inversa.</li>
+              <li><strong>row:</strong> Los elementos se disponen en una fila horizontal.</li>
+              <li><strong>column:</strong> Los elementos se disponen en una columna vertical.</li>
+              <li><strong>row-reverse:</strong> Los elementos se disponen en una fila horizontal inversa.</li>
+              <li><strong>column-reverse:</strong> Los elementos se disponen en una columna vertical inversa.</li>
             </ul>
-        </article>
+          </article>
 
-        <article>
+          <article>
             <h2>Justificación en Flexbox</h2>
             <p>
-                La propiedad <code>justify-content</code> en Flexbox permite controlar la distribución de los elementos a lo largo del eje principal del contenedor.
+              La propiedad <code>justify-content</code> en Flexbox permite controlar la distribución de los elementos a
+              lo largo del eje principal del contenedor.
             </p>
             <pre><code>
                 .contenedor {
@@ -430,12 +445,13 @@
                     justify-content: space-between; /* Distribuye espacio entre los elementos */
                 }
             </code></pre>
-        </article>
+          </article>
 
-        <article>
+          <article>
             <h2>Orden en Flexbox</h2>
             <p>
-                Flexbox permite controlar el orden de los elementos dentro de un contenedor mediante la propiedad <code>order</code>. Asigna un valor numérico para determinar la posición de cada elemento.
+              Flexbox permite controlar el orden de los elementos dentro de un contenedor mediante la propiedad
+              <code>order</code>. Asigna un valor numérico para determinar la posición de cada elemento.
             </p>
             <pre><code>
                 .elemento1 {
@@ -445,23 +461,27 @@
                     order: 1; /* Se mostrará primero */
                 }
             </code></pre>
-        </article>
-    </section>
+          </article>
+        </section>
 
-    <!-- Buenas Prácticas de Flexbox -->
-    <section>
-        <h1>Buenas Prácticas de Flexbox</h1>
-        <article>
+        <!-- Buenas Prácticas de Flexbox -->
+        <section>
+          <h1>Buenas Prácticas de Flexbox</h1>
+          <article>
             <ul>
-                <li><strong>Mantén la Estructura Semántica:</strong> Usa etiquetas HTML semánticas (<code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>).</li>
-                <li><strong>Uso de Porcentajes y Unidades Relativas:</strong> Utiliza porcentajes (%) y unidades como em, rem o vh/vw para tamaños flexibles y responsivos.</li>
-                <li><strong>Define Proporciones con Flexbox:</strong> Usa <code>flex-grow</code>, <code>flex-shrink</code> y <code>flex-basis</code> para controlar el crecimiento y contracción de los elementos.</li>
-                <li><strong>Minimiza la Dependencia de Dimensiones Fijas:</strong> Evita el uso excesivo de <code>px</code> para anchos y alturas, usa <code>flex-basis</code> o porcentajes.</li>
+              <li><strong>Mantén la Estructura Semántica:</strong> Usa etiquetas HTML semánticas
+                (<code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>).</li>
+              <li><strong>Uso de Porcentajes y Unidades Relativas:</strong> Utiliza porcentajes (%) y unidades como em,
+                rem o vh/vw para tamaños flexibles y responsivos.</li>
+              <li><strong>Define Proporciones con Flexbox:</strong> Usa <code>flex-grow</code>, <code>flex-shrink</code>
+                y <code>flex-basis</code> para controlar el crecimiento y contracción de los elementos.</li>
+              <li><strong>Minimiza la Dependencia de Dimensiones Fijas:</strong> Evita el uso excesivo de
+                <code>px</code> para anchos y alturas, usa <code>flex-basis</code> o porcentajes.</li>
             </ul>
-        </article>
-    </section>
-    </main>
-  </div>
+          </article>
+        </section>
+      </main>
+    </div>
 
 
     <!-- FOOTER -->
