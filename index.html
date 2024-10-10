@@ -7,14 +7,8 @@
   <title>Informática del CPEM 7
   </title>
 
-  <!-- ROBOTO -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -31,7 +25,7 @@
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
-    </div>
+      </div>
 
     </header>
     <!-- NAV-->
@@ -41,16 +35,16 @@
         <li><a href="html/html.html">Html</a></li>
         <li><a href="html/css.html">Css</a></li>
         <li><a href="html/trabajos-practicos.html">Trabajos Practicos</a></li>
-        <li><a hre f="html/experiencias-web.html">Experiencias Web</a></li>
- 
+        <li><a href="html/experiencias-web.html">Experiencias Web</a></li>
+
       </ul>
     </nav>
- <!-- MENU HAMBURGUESA-->
- <nav class="nav-burger">
-      
- </nav>
-   
-</header>
+    <!-- MENU HAMBURGUESA-->
+    <nav class="nav-burger">
+
+    </nav>
+
+    </header>
 
     <!-- Banner -->
     <div class="banner">
@@ -58,9 +52,8 @@
     </div>
 
     <!-- Contenido principal -->
-    <main>
-      <section>
-
+    <div class="contenido-principal">
+      <main>
         <article>
           <h2>¡Bienvenidos a la Página de Informática del CPEM 7!
           </h2>
@@ -73,8 +66,6 @@
           </p>
         </article>
 
-      </section>
-      <section>
         <article>
           <h3> ¿Qué encontrarás en esta página?</h3>
           <p>Este es tu espacio. Aquí vas a encontrar toda la teoría, los prácticos, y los recursos necesarios para que
@@ -83,9 +74,7 @@
             concepto puede impactar tu futuro. La informática te da el poder de crear, diseñar y resolver problemas.
           </p>
         </article>
-      </section>
 
-      <section>
         <article>
           <h2>¡Vos
             podés ser quien cree la próxima gran innovación!</h2>
@@ -118,8 +107,7 @@
             a
             tus necesidades y objetivos.</p>
         </article>
-      </section>
-      <section>
+
         <article>
           <span style="font-weight: bolder;">
             Nuestro compromiso es acompañarte en cada etapa de tu formación. Aquí, recibirás el apoyo de tus compañeros
@@ -138,8 +126,7 @@
           </p>
         </article>
 
-      </section>
-
+      </main>
       <!-- Barra lateral -->
       <aside>
         <h2>Últimas Noticias</h2>
@@ -159,7 +146,7 @@
 
           ¡La tecnología está en tus manos!</p>
       </aside>
-    </main>
+    </div>
 
     <!-- Mapa de Google -->
     <div class="map">
@@ -198,17 +185,17 @@
       </div>
     </footer>
   </div>
-<script>
-  // Seleccionar elementos
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  
-  // Agregar evento para mostrar/ocultar menú
-  hamburger.addEventListener('click', () => {
+  <script>
+    // Seleccionar elementos
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    // Agregar evento para mostrar/ocultar menú
+    hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('nav-active');
-  });
-  
-</script>
+    });
+
+  </script>
 </body>
 
 </html>

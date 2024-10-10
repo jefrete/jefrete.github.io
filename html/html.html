@@ -7,11 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Guía Básica de CSS</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-  
-
   <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -22,7 +19,7 @@
         <!-- Inserta el logo aquí -->
       </figure>
       <!-- Navegación principal -->
-      <h1>C.P.E.M. N°7<br>INFORMATICA
+      <h1>CPEM 7 - INFORMATICA</h1>
     </header>
 
     <nav>
@@ -38,17 +35,18 @@
     <div class="banner">
       <!-- Banner con imagen de fondo -->
     </div>
-    <main>
-      <h2>HTML</h2>
-      <article>
-        <h3>Introducción</h3>
-        <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Utiliza etiquetas para
-          estructurar el contenido en un documento que puede ser interpretado por los navegadores.</p>
-      </article>
 
-      <article>
-        <h3>Estructura Básica de un Documento HTML</h3>
-        <pre>
+    <div class="contenido-principal-htlm">
+      <main>
+        <article>
+          <h2>HTML</h2>
+
+          <h3>Introducción</h3>
+          <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Utiliza etiquetas para
+            estructurar el contenido en un documento que puede ser interpretado por los navegadores.</p>
+
+          <h3>Estructura Básica de un Documento HTML</h3>
+          <pre>
     &lt;!DOCTYPE html&gt;
     &lt;html lang="es"&gt;
     &lt;head&gt;
@@ -60,18 +58,16 @@
     &lt;/body&gt;
     &lt;/html&gt;
         </pre>
-        <p>Puedes crear la estructura básica de un documento HTML5 utilizando atajos en editores de código:</p>
-        <ul>
-          <li>En <strong>Visual Studio Code</strong> o <strong>Sublime Text</strong>, escribe <code>html:5</code> y
-            presiona <code>Tab</code>.</li>
-          <li>Escribe <code>!</code> y presiona <code>Tab</code> para lo mismo.</li>
-        </ul>
-      </article>
+          <p>Puedes crear la estructura básica de un documento HTML5 utilizando atajos en editores de código:</p>
+          <ul>
+            <li>En <strong>Visual Studio Code</strong> o <strong>Sublime Text</strong>, escribe <code>html:5</code> y
+              presiona <code>Tab</code>.</li>
+            <li>Escribe <code>!</code> y presiona <code>Tab</code> para lo mismo.</li>
+          </ul>
 
-      <article>
-        <h3>Comentarios en HTML</h3>
-        <p>Los comentarios se utilizan para dejar notas que no serán visibles en el navegador:</p>
-        <pre>
+          <h3>Comentarios en HTML</h3>
+          <p>Los comentarios se utilizan para dejar notas que no serán visibles en el navegador:</p>
+          <pre>
 &lt;!-- Este es un comentario en HTML --&gt;
 &lt;p&gt;Este es un párrafo.&lt;/p&gt;
 &lt;!--
@@ -80,35 +76,34 @@ que abarca múltiples
 líneas.
 --&gt;
       </pre>
-      </article>
 
-      <article>
-        <h3>Etiquetas Básicas de HTML</h3>
-        <h4>Encabezados</h4>
-        <p>Las etiquetas <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> definen encabezados de diferentes niveles:
-        </p>
-        <pre>
+          <h3>Etiquetas Básicas de HTML</h3>
+          <h4>Encabezados</h4>
+          <p>Las etiquetas <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> definen encabezados de diferentes niveles:
+          </p>
+          <pre>
 &lt;h1&gt;Encabezado 1&lt;/h1&gt;
 &lt;h2&gt;Encabezado 2&lt;/h2&gt;
         </pre>
 
-        <h4>Párrafos</h4>
-        <p>La etiqueta <code>&lt;p&gt;</code> define un párrafo:</p>
-        <pre>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</pre>
+          <h4>Párrafos</h4>
+          <p>La etiqueta <code>&lt;p&gt;</code> define un párrafo:</p>
+          <pre>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</pre>
 
-        <h4>Enlaces</h4>
-        <p>La etiqueta <code>&lt;a&gt;</code> define un enlace:</p>
-        <pre>&lt;a href="https://www.ejemplo.com"&gt;Visita Ejemplo&lt;/a&gt;</pre>
+          <h4>Enlaces</h4>
+          <p>La etiqueta <code>&lt;a&gt;</code> define un enlace:</p>
+          <pre>&lt;a href="https://www.ejemplo.com"&gt;Visita Ejemplo&lt;/a&gt;</pre>
 
-        <h4>Imágenes</h4>
-        <p>La etiqueta <code>&lt;img&gt;</code> define una imagen. Los atributos <code>src</code> y <code>alt</code> son
-          importantes:</p>
-        <pre>&lt;img src="ruta/a/imagen.jpg" alt="Descripción de la imagen"&gt;</pre>
+          <h4>Imágenes</h4>
+          <p>La etiqueta <code>&lt;img&gt;</code> define una imagen. Los atributos <code>src</code> y <code>alt</code>
+            son
+            importantes:</p>
+          <pre>&lt;img src="ruta/a/imagen.jpg" alt="Descripción de la imagen"&gt;</pre>
 
-        <h4>Listas</h4>
-        <p>Las etiquetas <code>&lt;ul&gt;</code> (lista no ordenada) y <code>&lt;ol&gt;</code> (lista ordenada)
-          contienen <code>&lt;li&gt;</code> (elementos de lista):</p>
-        <pre>
+          <h4>Listas</h4>
+          <p>Las etiquetas <code>&lt;ul&gt;</code> (lista no ordenada) y <code>&lt;ol&gt;</code> (lista ordenada)
+            contienen <code>&lt;li&gt;</code> (elementos de lista):</p>
+          <pre>
 &lt;ul&gt;
     &lt;li&gt;Elemento 1&lt;/li&gt;
     &lt;li&gt;Elemento 2&lt;/li&gt;
@@ -119,13 +114,11 @@ líneas.
     &lt;li&gt;Elemento 2&lt;/li&gt;
 &lt;/ol&gt;
   </pre>
-      </article>
 
-      <article>
-        <h3>Divisiones y Span</h3>
-        <p><code>&lt;div&gt;</code> define una sección en bloque, mientras que <code>&lt;span&gt;</code> define una en
-          línea:</p>
-        <pre>
+          <h3>Divisiones y Span</h3>
+          <p><code>&lt;div&gt;</code> define una sección en bloque, mientras que <code>&lt;span&gt;</code> define una en
+            línea:</p>
+          <pre>
  &lt;div&gt;
      &lt;h2&gt;Encabezado en div&lt;/h2&gt;
      &lt;p&gt;Párrafo en div&lt;/p&gt;
@@ -133,27 +126,24 @@ líneas.
 
  &lt;p&gt;Texto con &lt;span style="color:red;"&gt;span rojo&lt;/span& incluido.&lt;/p&gt;
     </pre>
-      </article>
 
-      <article>
-        <h3>Formularios</h3>
-        <p>La etiqueta <code>&lt;form&gt;</code> define un formulario con campos <code>&lt;input&gt;</code> y etiquetas
-          <code>&lt;label&gt;</code>:
-        </p>
-        <pre>
+          <h3>Formularios</h3>
+          <p>La etiqueta <code>&lt;form&gt;</code> define un formulario con campos <code>&lt;input&gt;</code> y
+            etiquetas
+            <code>&lt;label&gt;</code>:
+          </p>
+          <pre>
 &lt;form action="/enviar" method="post"&gt;
     &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
     &lt;input type="text" id="nombre" name="nombre"&gt;
     &lt;input type="submit" value="Enviar"&gt;
 &lt;/form&gt;
             </pre>
-      </article>
 
-      <article>
-        <h3>Tablas</h3>
-        <p>La etiqueta <code>&lt;table&gt;</code> define una tabla con filas (<code>&lt;tr&gt;</code>) y celdas
-          (<code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>):</p>
-        <pre>
+          <h3>Tablas</h3>
+          <p>La etiqueta <code>&lt;table&gt;</code> define una tabla con filas (<code>&lt;tr&gt;</code>) y celdas
+            (<code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>):</p>
+          <pre>
 &lt;table&gt;
     &lt;tr&gt;
         &lt;th&gt;Encabezado 1&lt;/th&gt;
@@ -165,21 +155,19 @@ líneas.
     &lt;/tr&gt;
     &lt;/table&gt;
             </pre>
-      </article>
 
-      <article>
-        <h3>Etiquetas Semánticas</h3>
-        <p>Estas etiquetas añaden significado al contenido:</p>
-        <ul>
-          <li><code>&lt;header&gt;</code>: Encabezado de la página o sección.</li>
-          <li><code>&lt;nav&gt;</code>: Sección de navegación.</li>
-          <li><code>&lt;section&gt;</code>: Sección de un documento.</li>
-          <li><code>&lt;article&gt;</code>: Contenido independiente.</li>
-          <li><code>&lt;aside&gt;</code>: Contenido adicional.</li>
-          <li><code>&lt;footer&gt;</code>: Pie de página.</li>
-        </ul>
+          <h3>Etiquetas Semánticas</h3>
+          <p>Estas etiquetas añaden significado al contenido:</p>
+          <ul>
+            <li><code>&lt;header&gt;</code>: Encabezado de la página o sección.</li>
+            <li><code>&lt;nav&gt;</code>: Sección de navegación.</li>
+            <li><code>&lt;section&gt;</code>: Sección de un documento.</li>
+            <li><code>&lt;article&gt;</code>: Contenido independiente.</li>
+            <li><code>&lt;aside&gt;</code>: Contenido adicional.</li>
+            <li><code>&lt;footer&gt;</code>: Pie de página.</li>
+          </ul>
 
-        <pre>
+          <pre>
 &lt;header&gt;
     &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
 &lt;/header&gt;
@@ -205,30 +193,26 @@ líneas.
 &lt;footer&gt;
     &lt;p&gt;&copy; 2024 Mi Sitio Web&lt;/p&gt;
 &lt;/footer&gt;
-     </pre>
-      </article>
-<article>
-        <h3>Buenas Prácticas</h3>
-        <ul>
-          <li>Usa etiquetas semánticas para mejorar la accesibilidad y el SEO.</li>
-          <li>Cierra todas las etiquetas, incluso las que no lo requieren explícitamente, como <code>&lt;img&gt;</code>.
-          </li>
-          <li>Escribe un código limpio y ordenado.</li>
-          <li>Documenta el código con comentarios.</li>
-          <li>Valida tu HTML con herramientas como <a href="https://validator.w3.org/" target="_blank">W3C Markup
-              Validation Service</a>.</li>
-        </ul>
-      </article>
+        </pre>
 
-      <article>
-        <h3>Recursos Adicionales</h3>
-        <ul>
-          <li><a href="https://www.w3schools.com/html/" target="_blank">Tutorial de HTML en W3Schools</a></li>
-          <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">HTML en MDN</a></li>
-        </ul>
-      </article>
-    </main>
-
+          <h3>Buenas Prácticas</h3>
+          <ul>
+            <li>Usa etiquetas semánticas para mejorar la accesibilidad y el SEO.</li>
+            <li>Cierra todas las etiquetas, incluso las que no lo requieren explícitamente, como
+              <code>&lt;img&gt;</code>.
+            </li>
+            <li>Escribe un código limpio y ordenado.</li>
+            <li>Documenta el código con comentarios.</li>
+            <li>Valida tu HTML con herramientas como <a href="https://validator.w3.org/" target="_blank">W3C Markup
+                Validation Service</a>.</li>
+          </ul>
+          <h3>Recursos Adicionales</h3>
+          <ul>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">Tutorial de HTML en W3Schools</a></li>
+            <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">HTML en MDN</a></li>
+          </ul>
+      </main>
+    </div>
     <footer class="footer">
       <div class="footer-content">
         <div class="social-links">
@@ -257,6 +241,7 @@ líneas.
       </div>
     </footer>
 
+
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -265,7 +250,11 @@ líneas.
       });
     });
   </script>
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
