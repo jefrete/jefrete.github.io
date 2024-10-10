@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        
         /* Estilos personalizados BEM */
         .experiencias {
             margin-top: 20px;
@@ -62,6 +63,7 @@
             /* Color de texto blanco */
             padding: 20px 0;
         }
+
         .bg--celeste {
             background-color: #007bff !important;
         }
@@ -81,32 +83,44 @@
             <h1 class=" text-negro">CPEM7 - INFORMATICA</h1>
         </header>
 
-        <!-- Navegación principal -->
-        <nav class="navbar navbar-expand-lg navbar-light mb-4 bg--celeste">
-            <div class="container-fluid">
-                <ul class="navbar-nav">
+
+        
+    <!-- Navbar con menú hamburguesa de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid bg--celeste">
+            <!-- Logo o nombre del sitio -->
+            <a class="navbar-brand text-white" href="#">NAV</a>
+
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link text-white" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html.html">HTML</a>
+                        <a class="nav-link text-white" href="#">Html</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="css.html">CSS</a>
+                        <a class="nav-link text-white" href="#">Css</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="trabajos-practicos.html">Trabajos Prácticos</a>
+                        <a class="nav-link text-white" href="#">Grid</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="experiencias-web.html">Experiencias Web</a>
+                        <a class="nav-link text-white" href="#">Trabajos Prácticos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Experiencias Web</a>
                     </li>
                 </ul>
             </div>
-        </nav>
-        <!-- Sección de banner o imagen descriptiva -->
-        <section class="img-fluid text-center mb-4">
-            <img src="../assets/banner1.jpg" alt="Imagen descriptiva" class="img-fluid" />
-        </section>
+        </div>
+    </nav>
 
         <!-- Contenido principal -->
         <main>
@@ -188,7 +202,8 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Tarjeta Responsive</h5>
-                            <p class="card-text">Este es un ejemplo de una tarjeta Bootstrap que se ajusta a diferentes tamaños de pantalla.</p>
+                            <p class="card-text">Este es un ejemplo de una tarjeta Bootstrap que se ajusta a diferentes
+                                tamaños de pantalla.</p>
                             <a href="#" class="btn btn-primary">Más Información</a>
                         </div>
                     </div>
@@ -204,7 +219,7 @@
                 </div>
             </div>
         </div>
-        
+
         <br>
         <!-- Pie de página -->
         <footer>
