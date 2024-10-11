@@ -6,8 +6,6 @@
 }
 
 html {
-  width: 100%;
-
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
@@ -30,17 +28,13 @@ html {
 }
 
 body {
-  width: 100%;
-  padding: 0px;
   background-color: #ffffff;
   color: #000000;
 }
 
 header {
-  width: 100%;
   background-color: #372323dc;
   background-color: #FEAB11;
-
 
   display: flex;
   flex-direction: column;
@@ -148,6 +142,7 @@ li {
 }
 
 .contenido-principal {
+ width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -157,24 +152,29 @@ main {
   display: flex;
   flex-direction: column;
 
-  gap: 1rem;
   font-size: 1rem;
   background-color: #111111;
 
   margin: 0 auto;
   padding: 1rem;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
 }
 
 section {
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
 }
 
 /* Artículo principal */
 article {
-  text-align: center;
+  flex-basis: 100%;
+  display: flex;
+  text-align: left;
+  
+  flex-direction: column;
 
+  align-items: start;
+  justify-content: left;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.398);
 
   color: #f5f5f5;
@@ -189,38 +189,29 @@ article {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-
 article h2 {
   color: #eeff00;
   margin: 1rem;
 }
-
 article p {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-
 article ul li {
   list-style: none;
 }
-
-/* Barra lateral */
 aside {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  text-align: center;
   padding: 1rem;
   background-color: black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  font-size: 1.5rem;
-  border-radius: 10px;
-
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
-  color: rgb(255, 255, 255);
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 aside h2 {
@@ -247,8 +238,39 @@ aside ul li a:hover {
   color: #dc0a0a;
   transition: color 0.5s ease;
   font-size: 1.7rem;
-
 }
+
+pre {
+  width: 100%;
+  background-color:  yellow;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-weight: bloder;
+  text-align: left;
+  border-radius: 5px;
+  margin: 1rem;
+} 
+code {
+  width: 100%;
+  background-color: yellow;
+  color: #000000;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  padding: 5px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  text-align: left;
+}
+
 
 .map {
   margin-top: 20px;
@@ -260,19 +282,6 @@ aside ul li a:hover {
   border: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
-pre {
-  background-color: #000000;
-  color: rgb(0, 255, 30);
-  padding: 10px;
-  overflow: auto;
-  white-space: pre-wrap;
-  font-weight: 600;
-  align-items: center;
-  text-align: left;
-  /* Permite el ajuste de línea */
-}
-
 
 .nav-burguer {
   display: flex;
@@ -421,7 +430,6 @@ aside {
     display: flex;
   }
 
-
   nav ul li {
     margin: 15px 0;
   }
@@ -443,8 +451,39 @@ aside {
   aside {
     padding: 1rem;
     font-size: 2rem;
-
   }
+  
+pre {
+  width: 100%;
+  background-color: yellow;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 10px;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-weight: bloder;
+  text-align: left;
+  border-radius: 5px;
+  margin: 1rem;
+} 
+code {
+  width: 100%;
+  background-color: yellow;
+  color: #000000;
+
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  padding: 5px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  text-align: left;
+}
+
 }
 
 /* Para tablets y pantallas pequeñas: dispositivos entre 768px y 991px */
@@ -532,16 +571,37 @@ aside {
     font-size: 1.5rem;
   }
 
+  pre {
+    width: 100%;
+    background-color:  yellow;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 10px;
+    overflow: auto;
+    white-space: pre-wrap;
+    font-weight: bloder;
+    text-align: left;
+    border-radius: 5px;
+    margin: 1rem;
+  } 
   code {
-    background-color: #f3ff0a;
+    width: 100%;
+    background-color: yellow;
     color: #000000;
+  
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    
     padding: 5px;
-    display: block;
     margin-bottom: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
+  
+    text-align: left;
   }
-
+  
   iframe {
     width: 100%;
     height: 300px;
@@ -569,20 +629,24 @@ aside {
 
   .contenido-principal {
     display: flex;
+    justify-content: center;
     flex-direction: row-reverse;
   }
 
+  
+
   main {
     flex-basis: 70%;
-
+    align-items: center;
+    align-content: center;
+  }
+  article h2{
+    text-align: center;
   }
 
   aside {
     flex-basis: 30%;
-
-
   }
-
 
   header {
     background-color: #1111fe;
@@ -593,6 +657,38 @@ aside {
     flex-direction: row;
     justify-content: space-between;
   }
+  
+pre {
+  width: 100%;
+  background-color:  yellow;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-weight: bloder;
+  text-align: left;
+  border-radius: 5px;
+  margin: 1rem;
+} 
+code {
+  width: 100%;
+  background-color: yellow;
+  color: #000000;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  padding: 5px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  text-align: left;
+}
+
 }
 
 /* Para pantallas grandes: desde 1200px en adelante */
@@ -622,8 +718,6 @@ aside {
   aside {
     display: flex;
     width: 30%;
-
-
   }
 
   header {
@@ -638,4 +732,36 @@ aside {
     flex-direction: row;
     justify-content: space-between;
   }
+  
+pre {
+  width: 100%;
+  background-color:  yellow;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-weight: bloder;
+  text-align: left;
+  border-radius: 5px;
+  margin: 1rem;
+} 
+code {
+  width: 100%;
+  background-color: yellow;
+  color: #000000;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  padding: 5px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  text-align: left;
+}
+
 }
