@@ -60,15 +60,13 @@
             <p>Los comentarios en CSS se utilizan de manera similar a los de HTML, para agregar notas o explicaciones en
               el código CSS. Los comentarios comienzan con <code>/*</code> y terminan con <code>*/</code>.</p>
             <pre><code>
-                  /* Este es un comentario en CSS */
-                  body {
-                      font-family: Arial, sans-serif;
-                  }
-                  /*
-                  Este es un comentario
-                  que abarca múltiples
-                  líneas.
-                  */
+/* Este es un comentario en CSS */
+body {
+    font-family: Arial, sans-serif;
+     }
+/*
+Este es un comentario que abamúltipleslíneas.
+*/
               </code></pre>
           </article>
 
@@ -77,17 +75,17 @@
             <p>Para enlazar un archivo CSS externo, utiliza la etiqueta <code>&lt;link&gt;</code> dentro del
               <code>&lt;head&gt;</code> de tu documento HTML:</p>
             <pre><code>
-                  &lt;!DOCTYPE html&gt;
-                  &lt;html lang="es"&gt;
-                  &lt;head&gt;
-                      &lt;meta charset="UTF-8"&gt;
-                      &lt;title&gt;Título de la Página&lt;/title&gt;
-                      &lt;link rel="stylesheet" href="estilos.css"&gt;
-                  &lt;/head&gt;
-                  &lt;body&gt;
-                      &lt;!-- Contenido va aquí --&gt;
-                  &lt;/body&gt;
-                  &lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título de la Página&lt;/title&gt;
+    &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Contenido va aquí --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
               </code></pre>
           </article>
 
@@ -96,22 +94,22 @@
             <p>Incluir CSS directamente en el archivo HTML no es recomendable. Se puede usar la etiqueta
               <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code>:</p>
             <pre><code>
-                  &lt;!DOCTYPE html&gt;
-                  &lt;html lang="es"&gt;
-                  &lt;head&gt;
-                      &lt;meta charset="UTF-8"&gt;
-                      &lt;title&gt;Título de la Página&lt;/title&gt;
-                      &lt;style&gt;
-                          body {
-                              font-family: Arial, sans-serif;
-                              background-color: #f0f0f0;
-                          }
-                      &lt;/style&gt;
-                  &lt;/head&gt;
-                  &lt;body&gt;
-                      &lt;!-- Contenido va aquí --&gt;
-                  &lt;/body&gt;
-                  &lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título de la Página&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+             }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Contenido va aquí --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
               </code></pre>
           </article>
 
@@ -119,7 +117,7 @@
             <h2>CSS en Línea</h2>
             <p>Puedes aplicar estilos directamente a un elemento HTML utilizando el atributo <code>style</code>:</p>
             <pre><code>
-                  &lt;p style="color: red;"&gt;Este es un párrafo con estilo en línea.&lt;/p&gt;
+&lt;p style="color: red;"&gt;Este es un párrafo con estilo en línea.&lt;/p&gt;
               </code></pre>
           </article>
 
@@ -139,28 +137,28 @@
             <p>Aplica estilos a elementos con una clase específica. Utiliza el punto (.) seguido del nombre de la clase.
             </p>
             <pre><code>
-                  <!-- HTML -->
-                  &lt;p class="intro"&gt;Este es un párrafo con clase "intro".&lt;/p&gt;
-  
-                  <!-- CSS -->
-                  .intro {
-                      font-size: 20px;
-                  }
-              </code></pre>
+<!-- HTML -->
+&lt;p class="intro"&gt;Este es un párrafo con clase "intro".&lt;/p&gt;
+
+<!-- CSS -->
+.intro {
+        font-size: 20px;
+        }
+</code></pre>
 
             <h3>Selectores de ID</h3>
             <p>Aplica estilos a un elemento con un ID específico. Utiliza la almohadilla (#) seguida del nombre del ID.
             </p>
             <pre><code>
-                  <!-- HTML -->
-                  &lt;div id="header"&gt;Este es el encabezado.&lt;/div&gt;
+<!-- HTML -->
+&lt;div id="header"&gt;Este es el encabezado.&lt;/div&gt;
   
-                  <!-- CSS -->
-                  #header {
-                      background-color: #333;
-                      color: white;
-                  }
-              </code></pre>
+<!-- CSS -->
+#header {
+    background-color: #333;
+    color: white;
+        }
+</code></pre>
 
             <h2>Buenas Prácticas en CSS</h2>
             <ol>
@@ -182,28 +180,28 @@
                   </code></pre>
               <li>Estructura y Organización: Organiza tus reglas CSS en bloques lógicos.</li>
               <pre><code>
-                      /* Estilos para el cuerpo */
-                      body {
-                          font-family: Arial, sans-serif;
-                          background-color: #f0f0f0;
-                      }
+/* Estilos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+     }
   
-                      /* Estilos para el encabezado */
-                      header {
-                          background-color: #333;
-                          color: white;
-                          padding: 10px;
-                      }
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+       }
                   </code></pre>
               <li>Usa Unidades Relativas: Prefiere unidades relativas (%, em, rem) sobre unidades absolutas (px) para
                 una mejor adaptación a diferentes pantallas.</li>
               <pre><code>
-                      body {
-                          font-size: 16px;
-                      }
-                      .contenido {
-                          font-size: 1.2em; /* 1.2 veces el tamaño de la fuente del cuerpo */
-                      }
+body {
+    font-size: 16px;
+}
+.contenido {
+    font-size: 1.2em; /* 1.2 veces el tamaño de la fuente del cuerpo */
+}
                   </code></pre>
             </ol>
 
@@ -211,44 +209,44 @@
             <ol>
               <li>Evita el CSS en Línea: Es difícil de mantener y no reutilizable.</li>
               <pre><code>
-                      <!-- Malo -->
-                      &lt;p style="color: red;"&gt;Este es un párrafo con estilo en línea.&lt;/p&gt;
+<!-- Malo -->
+&lt;p style="color: red;"&gt;Este es un párrafo con estilo en línea.&lt;/p&gt;
                   </code></pre>
               <li>No Abuses de los Selectores ID: Son muy específicos y pueden causar problemas de mantenibilidad.</li>
               <pre><code>
-                      /* Malo */
-                      header {
-                          background-color: red;
-                      }
+/* Malo */
+header {
+    background-color: red;
+}
                   </code></pre>
-            </ol>
-          </article>
-          <article>
-            <h2>Recursos Adicionales</h2>
-            <ul>
-              <li><a href="https://www.w3schools.com/css/">W3Schools: Tutorial CSS</a></li>
-              <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">MDN Web Docs: Guía CSS</a></li>
-            </ul>
+  </ol>
+ </article>
+<article>
+   <h2>Recursos Adicionales</h2>
+   <ul>
+     <li><a href="https://www.w3schools.com/css/">W3Schools: Tutorial CSS</a></li>
+    <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">MDN Web Docs: Guía CSS</a></li>
+   </ul>
 
-              <h2>¿Qué es CSS?</h2>
-              <p>
-                CSS o <strong>Cascading Style Sheets</strong>, es una hoja de estilo que permite a los diseñadores
-                definir el aspecto de un documento HTML. Este lenguaje de diseño es fundamental para crear páginas web
-                atractivas y profesionales.
-              </p>
+     <h2>¿Qué es CSS?</h2>
+     <p>
+       CSS o <strong>Cascading Style Sheets</strong>, es una hoja de estilo que permite a los diseñadores
+       definir el aspecto de un documento HTML. Este lenguaje de diseño es fundamental para crear páginas web
+       atractivas y profesionales.
+    </p>
 
-            <article>
-              <h2>Sintaxis y estructura de CSS</h2>
-              <p>
-                CSS se escribe en una sintaxis sencilla con reglas que definen la apariencia de los elementos HTML. Una
-                regla contiene un selector, que indica el elemento a estilizar, y una declaración con propiedades y
-                valores para modificar su diseño.
-              </p>
+  <article>
+    <h2>Sintaxis y estructura de CSS</h2>
+    <p>
+      CSS se escribe en una sintaxis sencilla con reglas que definen la apariencia de los elementos HTML. Una
+      regla contiene un selector, que indica el elemento a estilizar, y una declaración con propiedades y
+      valores para modificar su diseño.
+    </p>
               <pre><code>
-                /* Sintaxis Básica */
-                Selector {
-                    Propiedad: Valor;
-                }
+/* Sintaxis Básica */
+Selector {
+    Propiedad: Valor;
+}
             </code></pre>
               <ul>
                 <li><strong>Selector</strong>: Identifica los elementos HTML a estilizar.</li>
@@ -266,38 +264,37 @@
               <ul>
                 <li><strong>1. Selectores de Elemento:</strong> Se aplican a todos los elementos del mismo tipo.</li>
                 <pre><code>
-                    /* Ejemplo: */
-                    p {
-                        color: blue;
-                    }
+/* Ejemplo: */
+p {
+   color: blue;
+  }
                 </code></pre>
 
                 <li><strong>2. Selectores de Clase:</strong> Se aplican a elementos que comparten una clase específica.
                 </li>
                 <pre><code>
-                    /* Ejemplo: */
-                    .nombre-clase {
-                        font-weight: bold;
-                    }
+/* Ejemplo: */
+.nombre-clase {
+    font-weight: bold;
+}
                 </code></pre>
 
                 <li><strong>3. Selectores de ID:</strong> Se aplican a un elemento único con un ID específico.</li>
                 <pre><code>
-                    /* Ejemplo: */
-                    #encabezado {
-                        background-color: red;
-                    }
+/* Ejemplo: */
+#encabezado {
+background-color: red;
+            }
                 </code></pre>
-
-                <li><strong>4. Selectores Combinados:</strong> Se combinan para crear reglas más específicas.</li>
-                <pre><code>
-                    /* Ejemplo: */
-                    h1.destacado {
-                        font-size: 24px;
-                    }
-                </code></pre>
-              </ul>
-            </article>
+<li><strong>4. Selectores Combinados:</strong> Se combinan para crear reglas más específicas.</li>
+<pre><code>
+    /* Ejemplo: */
+    h1.destacado {
+        font-size: 24px;
+    }
+</code></pre>
+</ul>
+</article>
 
             <!-- Propiedades y Valores CSS -->
             <article>

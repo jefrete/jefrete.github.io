@@ -14,7 +14,6 @@ html {
 
   font-size: 10px;
   line-height: 1.5;
-
 }
 
 .hamburger {
@@ -39,8 +38,7 @@ body {
 header {
   width: 100%;
   background-color: #372323dc;
-  background-color: #FEAB11;
-
+  background-color: #feab11;
 
   display: flex;
   flex-direction: column;
@@ -50,7 +48,6 @@ header {
   font-size: 2rem;
   justify-content: center;
   border-bottom: 2px solid #000000;
-
 }
 
 header h1 {
@@ -69,7 +66,6 @@ header figure img {
 }
 
 /* Estilo de navegación principal */
-
 nav {
   display: flex;
   background-color: #0097b6;
@@ -78,7 +74,6 @@ nav {
   font-weight: 600;
   text-align: center;
 }
-
 .navegar {
   display: none;
 }
@@ -100,7 +95,6 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
 }
 
 nav ul li {
@@ -150,6 +144,14 @@ li {
 .contenido-principal {
   display: flex;
   flex-wrap: wrap;
+  background-color: #000000;
+
+}
+.contenido-principal-htlm {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000000;
+
 }
 
 main {
@@ -159,7 +161,6 @@ main {
 
   gap: 1rem;
   font-size: 1rem;
-  background-color: #111111;
 
   margin: 0 auto;
   padding: 1rem;
@@ -214,7 +215,6 @@ aside {
   background-color: black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-size: 1.5rem;
-  border-radius: 10px;
 
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 
@@ -224,7 +224,7 @@ aside {
 }
 
 aside h2 {
-  color: #00FFFF;
+  color: #00ffff;
   margin: 1rem;
   text-align: center;
 }
@@ -247,7 +247,6 @@ aside ul li a:hover {
   color: #dc0a0a;
   transition: color 0.5s ease;
   font-size: 1.7rem;
-
 }
 
 .map {
@@ -273,7 +272,6 @@ pre {
   /* Permite el ajuste de línea */
 }
 
-
 .nav-burguer {
   display: flex;
 }
@@ -293,6 +291,7 @@ pre {
 }
 
 footer {
+  border-top: 2px solid white;
   width: 100%;
   height: 300px;
 
@@ -377,9 +376,7 @@ footer .footer-links a {
 .contenido-principal-htlm main,
 aside {
   flex-basis: 100%;
-
 }
-
 
 /* Para dispositivos medianos: móviles grandes y tablets en modo vertical (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
@@ -398,7 +395,7 @@ aside {
 
   header {
     background-color: #ff0000;
-    background-color: #FEAB11;
+    background-color: #feab11;
 
     align-items: center;
     justify-content: space-between;
@@ -421,7 +418,6 @@ aside {
     display: flex;
   }
 
-
   nav ul li {
     margin: 15px 0;
   }
@@ -443,13 +439,11 @@ aside {
   aside {
     padding: 1rem;
     font-size: 2rem;
-
   }
 }
 
 /* Para tablets y pantallas pequeñas: dispositivos entre 768px y 991px */
 @media (min-width: 768px) and (max-width: 991px) {
-
   html {
     font-size: 10px;
   }
@@ -460,7 +454,7 @@ aside {
 
   header {
     background-color: #fe1193;
-    background-color: #FEAB11;
+    background-color: #feab11;
 
     color: white;
     padding: 10px 10px;
@@ -492,37 +486,21 @@ aside {
     flex-direction: row-reverse;
   }
 
-  .contenido-principal-css {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .contenido-principal-css main {
-    flex-basis: 100%;
-  }
-
-  .contenido-principal-css section {
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: column;
-  }
 
   .contenido-principal-html article {
     flex-basis: 100%;
-    flex-direction: row
+    flex-direction: row;
   }
 
   main {
     flex-basis: 70%;
     text-align: center;
-
   }
 
   aside {
     flex-basis: 30%;
     font-size: 1.5rem;
   }
-
 
   section {
     display: flex;
@@ -548,12 +526,25 @@ aside {
     border: 1px solid #ccc;
     margin-bottom: 20px;
   }
+  
+  .contenido-principal-css {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .contenido-principal-css main {
+    flex-basis: 100%;
+  }
+
+  .contenido-principal-css section {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Para pantallas de escritorio medianas: entre 992px y 1199px */
 @media (min-width: 992px) and (max-width: 1699px) {
-
   html {
     font-size: 15px;
     font-weight: 300;
@@ -574,19 +565,15 @@ aside {
 
   main {
     flex-basis: 70%;
-
   }
 
   aside {
     flex-basis: 30%;
-
-
   }
-
 
   header {
     background-color: #1111fe;
-    background-color: #FEAB11;
+    background-color: #feab11;
   }
 
   nav ul {
@@ -597,7 +584,6 @@ aside {
 
 /* Para pantallas grandes: desde 1200px en adelante */
 @media (min-width: 1700px) {
-
   html {
     font-size: 20px;
   }
@@ -606,7 +592,6 @@ aside {
     width: 95%;
     display: flex;
     flex-direction: column;
-
   }
 
   .contenido-principal {
@@ -616,14 +601,11 @@ aside {
 
   main {
     width: 65%;
-
   }
 
   aside {
     display: flex;
     width: 30%;
-
-
   }
 
   header {
