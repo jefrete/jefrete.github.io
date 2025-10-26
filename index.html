@@ -1,200 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Informática del CPEM 7
-  </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>link-sma · Internet donde no llega</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome (iconos). Se puede quitar si preferís no depender de CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/TEj5rF+0kP4Z3xmcC3lqyZr5evoEH3Sl0o9u6b1RB1iY1X1aQ8z+Xo8XwQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
+  <style>
+    /* Reset ligero */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0f1720;
+      color: #e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    /* Contenedor general */
+    .container{max-width:1180px;margin:0 auto;padding:20px;}
+
+    /* Header / NAV */
+    header.site-header{
+      position:sticky;top:0;z-index:60;
+      background:rgba(12,14,17,0.75);
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(100,100,110,0.12);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand-badge{
+      width:44px;height:44px;border-radius:10px;
+      background:linear-gradient(135deg,#06b6d4,#046bfb);
+      color:#071021;font-weight:700;display:flex;align-items:center;justify-content:center;
+      box-shadow:0 6px 18px rgba(6,182,212,0.12);
+      font-size:13px;
+    }
+    .brand-text .name{font-weight:700}
+    .brand-text .tag{font-size:11px;color:#9aa3b2;letter-spacing:0.08em;text-transform:uppercase}
+
+    .nav-links{display:flex;gap:18px;align-items:center;color:#b9c3cf;font-size:15px}
+    .nav-links a{padding:8px;border-radius:8px}
+    .nav-links a:hover{color:#fff;background:rgba(255,255,255,0.02)}
+
+    .cta-btn{
+      background:#06b6d4;color:#071021;padding:10px 14px;border-radius:12px;font-weight:600;
+      box-shadow:0 10px 30px rgba(6,182,212,0.12);
+    }
+    .cta-btn:active{transform:translateY(1px)}
+
+    /* HERO */
+    .hero{padding:44px 18px 60px;border-bottom:1px solid rgba(100,100,110,0.06);position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;max-width:1180px;margin:0 auto}
+    @media (max-width:900px){ .hero-grid{grid-template-columns:1fr; padding-bottom:14px}}
+    .hero h1{font-size:34px;color:#fff;line-height:1.05;margin-bottom:12px}
+    .hero p.lead{color:#9fb0bf;font-size:16px;max-width:680px}
+    .hero ul.benef{margin-top:14px;color:#c6d6df;list-style:none;display:block;gap:8px}
+    .hero ul.benef li{display:flex;gap:10px;align-items:flex-start;margin:8px 0;font-size:14px}
+    .hero .actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:12px;color:#dbeaf6}
+    .muted-note{font-size:12px;color:#7f8b95;margin-top:8px}
+
+    /* Speed card */
+    .card{
+      border-radius:16px;background:linear-gradient(180deg,rgba(20,20,24,0.6),rgba(12,12,14,0.6));
+      padding:18px;border:1px solid rgba(120,130,150,0.06);box-shadow:0 30px 60px rgba(0,0,0,0.6);
+    }
+    .speed-top{font-size:12px;color:#9fb0bf;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+    .speed-main{display:flex;align-items:flex-end;gap:14px}
+    .speed-main .download{font-size:42px;font-weight:700;color:#fff}
+    .speed-main .download .u{font-size:16px;color:#06b6d4;font-weight:600;margin-left:6px}
+    .speed-main .ping{margin-left:auto;text-align:right}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+    .mini-grid .mini{background:rgba(10,10,12,0.5);padding:10px;border-radius:10px;border:1px solid rgba(100,100,110,0.06)}
+    .note-small{font-size:12px;color:#8fa3b2;margin-top:12px}
+
+    /* SECTIONS */
+    section{padding:44px 18px}
+    .section-title{max-width:780px;margin:0 auto;text-align:center}
+    .section-title h2{font-size:24px;color:#fff;margin-bottom:8px}
+    .section-title p{color:#9fb0bf;font-size:14px}
+
+    /* Services grid */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    @media (max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:620px){.services-grid{grid-template-columns:1fr}}
+    .service-card{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(12,12,14,0.6),rgba(10,10,12,0.55));border:1px solid rgba(100,100,110,0.05)}
+    .service-card h3{color:#e6f5ff;margin-top:8px;font-size:15px}
+    .service-card p{color:#9fb0bf;font-size:13px;margin-top:8px}
+    .service-card ul{margin-top:8px;color:#cfe3ee;font-size:13px;list-style:none;padding-left:0}
+
+    /* POR QUÉ */
+    .why-grid{display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:center}
+    @media (max-width:900px){.why-grid{grid-template-columns:1fr}}
+    .why-list .why-item{display:flex;gap:12px;margin-bottom:14px}
+    .why-list .why-item .icon{color:#06b6d4;font-size:18px;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .faq-box{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(12,12,14,0.55),rgba(10,10,12,0.55));border:1px solid rgba(100,100,110,0.05)}
+
+    /* PROCESO */
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+    @media (max-width:980px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:620px){.steps-grid{grid-template-columns:1fr}}
+    .step-card{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(12,12,14,0.55),rgba(10,10,12,0.55));border:1px solid rgba(100,100,110,0.05)}
+    .step-card .step-num{color:#06b6d4;font-weight:700;font-size:11px;margin-bottom:6px}
+
+    /* CONTACTO */
+    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start}
+    @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+    .contact-info ul{list-style:none;padding-left:0}
+    .contact-info li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
+    .contact-info .icon{width:44px;height:44;border-radius:10px;background:rgba(10,10,12,0.5);display:flex;align-items:center;justify-content:center;color:#06b6d4}
+
+    /* Form */
+    form .field{margin-bottom:12px}
+    label{display:block;font-size:12px;color:#9fb0bf;margin-bottom:6px}
+    input[type="text"],textarea{
+      width:100%;padding:12px;border-radius:10px;border:1px solid rgba(120,130,150,0.06);
+      background:rgba(10,10,12,0.45);color:#e6eef6;font-size:14px;outline:none;
+    }
+    textarea{min-height:110px;resize:none}
+    .btn-primary{background:#06b6d4;color:#071021;padding:12px 14px;border-radius:12px;border:none;font-weight:700;width:100%}
+    .form-status{text-align:center;font-size:13px;margin-top:10px;color:#9fb0bf}
+
+    /* FOOTER */
+    footer.site-footer{border-top:1px solid rgba(120,130,150,0.03);padding:18px;color:#9fb0bf}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+    /* small helpers */
+    .muted{color:#8fa3b2}
+    .small{font-size:13px}
+    .shadow-glow{box-shadow:0 30px 70px rgba(6,182,212,0.06)}
+  </style>
 </head>
-
 <body>
-  <!-- Contenedor principal -->
-  <div class="container">
-    <!-- Encabezado -->
-    <header>
-      <figure>
-        <img src="assets/logo1.jpg" style="flex-basis: 30%;" alt="Logo de la Academia" />
-        <!-- Inserta el logo aquí -->
-      </figure>
-      <h1 class="grid-item">CPEM 7 - INFORMATICA</h1>
-      <div class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
 
-    </header>
-    <!-- NAV-->
-    <nav class="nav-links" id="nav-links">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="html/html.html">Html</a></li>
-        <li><a href="html/css.html">Css</a></li>
-        <li><a href="html/trabajos-practicos.html">Trabajos Practicos</a></li>
-        <li><a href="html/experiencias-web.html">Experiencias Web</a></li>
-
-      </ul>
-      <nav class="nav-burger">
-      </nav>
-    </nav>
-    <!-- MENU HAMBURGUESA-->
-    
-    </header>
-
-    <!-- Banner -->
-    <div class="banner">
-      <!-- Banner con imagen de fondo -->
-    </div>
-
-    <!-- Contenido principal -->
-    <div class="contenido-principal">
-      <main>
-        <article>
-          <h2>¡Bienvenidos a la Página de Informática del CPEM 7!
-          </h2>
-          <h3>Tu viaje comienza aquí</h3>
-          <p>En el CPEM 7 de Junín de los Andes, la clase de informática no es solo otra asignatura, es la puerta que te
-            abre al mundo digital.
-          </p>
-          <p>Aquí aprenderás a dominar herramientas que están transformando el mundo y que serán
-            parte esencial de tu vida, tanto profesional como personal.
-          </p>
-        </article>
-
-        <article>
-          <h3> ¿Qué encontrarás en esta página?</h3>
-          <p>Este es tu espacio. Aquí vas a encontrar toda la teoría, los prácticos, y los recursos necesarios para que
-            tu
-            aprendizaje sea completo y significativo. Pero no se trata solo de estudiar, sino de entender cómo cada
-            concepto puede impactar tu futuro. La informática te da el poder de crear, diseñar y resolver problemas.
-          </p>
-        </article>
-
-        <article>
-          <h2>¡Vos
-            podés ser quien cree la próxima gran innovación!</h2>
-          </p>
-          <h3>En esta era de la educación 3.0, nuestro objetivo es llevar la enseñanza a un nuevo nivel
-          </h3>
-          <p>Aquí encontrarás
-            un
-            acceso fácil y directo a recursos de calidad que te ayudarán a entender y dominar el desarrollo web. Cada
-            lección, cada práctica, y cada proyecto están diseñados para brindarte la mejor experiencia educativa
-            posible.
-          </p>
-        </article>
-
-        <article>
-          <p>
-            Bienvenido a la Educación 3.0 en Desarrollo Web
-            Mejorando la accesibilidad y experiencia educativa a través de recursos digitales.
-          </p>
-          <p>
-            Únite a nuestra comunidad y comenza tu viaje en el mundo del
-            desarrollo web con nosotros.
-          </p>
-          <h3>Recursos a Tu Alcance</h3>
-
-          <p>Te ofrecemos hojas de ruta que te guiarán en tu proceso de aprendizaje, así como enlaces a plataformas como
-            W3Schools y FreeCodeCamp, donde podrás encontrar tutoriales interactivos y ejercicios prácticos. Además,
-            hemos
-            recopilado cursos gratuitos y de pago, como los de CoderHouse, para que elijas la opción que mejor se adapte
-            a
-            tus necesidades y objetivos.</p>
-        </article>
-
-        <article>
-          <span style="font-weight: bolder;">
-            Nuestro compromiso es acompañarte en cada etapa de tu formación. Aquí, recibirás el apoyo de tus compañeros
-            y
-            de
-            mí, el profesor Julián E. Frete. No dudes en compartir tus dudas, logros y experiencias. Este espacio
-            es tuyo y cada interacción cuenta.
-          </span>
-
-
-          <h3>Únete a Nuestra Comunidad</h3>
-          <p>¡Comencemos!
-            El primer paso es el más importante
-            Te animo a explorar los recursos disponibles, participar en nuestras actividades y no dudar en pedir ayuda
-            cuando la necesites. Juntos, haremos de este viaje una experiencia inolvidable.
-          </p>
-        </article>
-
-      </main>
-      <!-- Barra lateral -->
-      <aside>
-        <h2>Últimas Noticias</h2>
-        <ul>
-          <li><a href="#">Nuevo curso de React.js disponible</a></li>
-          <li>
-            <a href="#">Cómo mejorar tu portfolio como desarrollador</a>
-          </li>
-          <li><a href="#">Tendencias en diseño web para 2024</a></li>
-          <li><a href="#">10 consejos para entrevistas técnicas</a></li>
-        </ul>
-        <p>🚀 ¿Estás listo para ser un profesional del futuro?
-          Esta página es tu herramienta para alcanzar todo tu potencial. Estás en el camino correcto. Lo que aprendés
-          hoy en esta clase será una ventaja clave mañana. Aprovechá cada recurso, estudiá con entusiasmo, y recordá
-          que
-          todo lo que logres en informática puede abrirte puertas en cualquier campo que elijas.
-
-          ¡La tecnología está en tus manos!</p>
-      </aside>
-    </div>
-
-    <!-- Mapa de Google -->
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12234.219822401723!2d-71.0719897!3d-39.9513435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96119960cb01e1e9%3A0xee5b6e8c7c2089b5!2sCPEM%20Nro.%207%20Malvinas%20Argentinas!5e0!3m2!1ses!2sar!4v1728330085625!5m2!1ses!2sar"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <!-- Pie de página -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="social-links">
-          <a href="https://facebook.com" target="_blank" class="social-icon">
-            <img src="assets/logos/facebook-removebg-preview (1).png" alt="Facebook">
-          </a>
-          <a href="https://twitter.com" target="_blank" class="social-icon">
-            <img src="assets/logos/twitter-removebg-preview (1).png" alt="Twitter">
-          </a>
-          <a href="https://instagram.com" target="_blank" class="social-icon">
-            <img src="assets/logos/instagram-removebg-preview (1).png" alt="Instagram">
-          </a>
-          <a href="https://linkedin.com" target="_blank" class="social-icon">
-            <img src="assets/logos/linkedin-removebg-preview (1).png" alt="LinkedIn">
-          </a>
-          <a href="https://youtube.com" target="_blank" class="social-icon">
-            <img src="assets/logos/youtube-removebg-preview (2).png" alt="YouTube">
-          </a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-inner container">
+      <div class="brand">
+        <div class="brand-badge">link</div>
+        <div class="brand-text">
+          <div class="name">link-sma</div>
+          <div class="tag">conectividad pro</div>
         </div>
-        <p class="footer-text">
-          © 2024 Nombre de la Empresa. Todos los derechos reservados. <br>
-          Dirección: Calle Falsa 123, Ciudad, País. <br>
-          Teléfono: (123) 456-7890. <br>
-          Email: contacto@empresa.com
-        </p>
       </div>
-    </footer>
-  </div>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#por-que">Por qué</a>
+        <a href="#proceso">Cómo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="cta-btn" href="#contacto">Pedir visita técnica</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="hero-grid container">
+        <div>
+          <h1>Internet rápido donde nadie te lo quiere instalar.</h1>
+          <p class="lead">
+            link-sma instala Starlink, arma redes WiFi estables, cablea, configura cámaras
+            y deja todo funcionando en cabañas, hoteles, campos y escuelas rurales. Servicio técnico real, sin vueltas.
+          </p>
+
+          <ul class="benef" aria-hidden="false">
+            <li><i class="fa-solid fa-signal" style="color:#06b6d4;margin-top:4px;width:20px"></i> Wifi que llega a todas las habitaciones, no solo “al lado del módem”.</li>
+            <li><i class="fa-solid fa-satellite-dish" style="color:#06b6d4;margin-top:4px;width:20px"></i> Conexión satelital Starlink donde no hay fibra ni 4G.</li>
+            <li><i class="fa-solid fa-video" style="color:#06b6d4;margin-top:4px;width:20px"></i> Cámaras de seguridad con acceso remoto desde el teléfono.</li>
+          </ul>
+
+          <div class="actions">
+            <a class="cta-btn" href="#contacto"><i class="fa-solid fa-phone" style="margin-right:8px"></i> Quiero un presupuesto</a>
+            <a class="btn-outline" href="#servicios"><i class="fa-solid fa-gears" style="margin-right:8px"></i> Ver servicios</a>
+          </div>
+
+          <div class="muted-note">San Martín de los Andes · Junín · Zonas rurales cercanas</div>
+        </div>
+
+        <!-- Speed card -->
+        <aside class="card shadow-glow" aria-label="Resultados ejemplo de velocidad">
+          <div class="speed-top"><i class="fa-solid fa-gauge-high" style="color:#06b6d4"></i> Test después de la instalación</div>
+
+          <div class="speed-main">
+            <div>
+              <div class="download"><span id="speedNumber">145</span><span class="u">Mbps</span></div>
+              <div class="small muted">Bajada estable</div>
+            </div>
+
+            <div class="ping">
+              <div style="font-size:20px;font-weight:700;color:#fff"><span id="pingNumber">28</span><span style="font-size:12px;color:#06b6d4;margin-left:6px">ms</span></div>
+              <div class="small muted">Ping promedio</div>
+            </div>
+          </div>
+
+          <div class="mini-grid">
+            <div class="mini">
+              <div class="small muted" style="display:flex;gap:8px;align-items:center"><i class="fa-solid fa-house-signal" style="color:#06b6d4"></i> Cobertura WiFi</div>
+              <div style="font-weight:700;margin-top:6px">100% en todas las cabañas</div>
+            </div>
+            <div class="mini">
+              <div class="small muted" style="display:flex;gap:8px;align-items:center"><i class="fa-solid fa-screwdriver-wrench" style="color:#06b6d4"></i> Soporte</div>
+              <div style="font-weight:700;margin-top:6px">Vamos nosotros, no call center</div>
+            </div>
+          </div>
+
+          <div class="note-small">Datos reales de instalaciones recientes en zona cordillera con Starlink + red mesh. Tu resultado puede variar según árboles, cerros, cantidad de paredes, etc.</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+      <div class="section-title container">
+        <h2>Servicios</h2>
+        <p>Elegí uno o pedinos todo el combo. Llegamos, instalamos, probamos, te dejamos la red andando.</p>
+      </div>
+
+      <div class="container services-grid" style="margin-top:24px">
+        <!-- Starlink -->
+        <div class="service-card">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44;border-radius:10px;background:rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-satellite-dish" style="color:#06b6d4"></i></div>
+            <div style="font-weight:700">Internet satelital Starlink</div>
+          </div>
+          <h3>Starlink</h3>
+          <p>Gestión de equipo, ubicación ideal de la antena, montaje seguro, ruteo de cables, configuración inicial y test de velocidad.</p>
+          <ul>
+            <li>• Ideal para campo / ruta / cerro</li>
+            <li>• Sin obra civil pesada</li>
+            <li>• Pensado para turismo y escuelas rurales</li>
+          </ul>
+        </div>
+
+        <!-- WiFi Pro -->
+        <div class="service-card">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44;border-radius:10px;background:rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-house-signal" style="color:#06b6d4"></i></div>
+            <div style="font-weight:700">WiFi / Red Mesh</div>
+          </div>
+          <h3>WiFi / Red Mesh</h3>
+          <p>Te armamos WiFi estable para que todos tus huéspedes tengan señal. Nada de “me anda lento en la pieza 4”.</p>
+          <ul>
+            <li>• Relevamiento de interferencias y paredes</li>
+            <li>• Cableado prolijo (no a la vista)</li>
+            <li>• Equipos mesh modernos</li>
+          </ul>
+        </div>
+
+        <!-- Cámaras -->
+        <div class="service-card">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44;border-radius:10px;background:rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-video" style="color:#06b6d4"></i></div>
+            <div style="font-weight:700">Cámaras de seguridad</div>
+          </div>
+          <h3>Cámaras IP</h3>
+          <p>Instalación de cámaras IP interiores / exteriores para ver todo desde tu celular. Ideal para complejos de cabañas.</p>
+          <ul>
+            <li>• Grabación local + nube</li>
+            <li>• Acceso remoto seguro</li>
+            <li>• Aviso si se corta internet</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ -->
+    <section id="por-que" style="background:linear-gradient(180deg,rgba(5,6,8,0.6),rgba(8,10,12,0.6));border-top:1px solid rgba(120,130,150,0.03);border-bottom:1px solid rgba(120,130,150,0.03)">
+      <div class="container why-grid">
+        <div>
+          <h2 style="font-size:22px;margin-bottom:12px;color:#fff">¿Por qué link-sma?</h2>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="icon"><i class="fa-solid fa-user-tie"></i></div>
+              <div>
+                <div style="font-weight:700;color:#fff">Hablás con técnicos, no con un call center</div>
+                <div class="muted small">Te atiende la misma persona que va a tu cabaña / hotel / escuela.</div>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+              <div>
+                <div style="font-weight:700;color:#fff">Instalación limpia</div>
+                <div class="muted small">Cableado prolijo, sin alambres colgando ni enchufes peligrosos.</div>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <div style="font-weight:700;color:#fff">Red segura</div>
+                <div class="muted small">Invitados con una red y vos con otra. Nadie entra a tu impresora ni a tus cámaras.</div>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div style="font-weight:700;color:#fff">Respuesta rápida</div>
+                <div class="muted small">Sabemos que “no hay internet” = huéspedes enojados. Te priorizamos.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="faq-box">
+          <div style="font-weight:700;color:#fff;margin-bottom:8px">Preguntas frecuentes</div>
+          <details style="margin-bottom:8px">
+            <summary style="cursor:pointer;color:#e6eef6">¿Pueden venir aunque yo ya tenga internet?</summary>
+            <div style="margin-top:8px;color:#9fb0bf">Sí. Mejoramos lo que ya tenés y lo dejamos estable.</div>
+          </details>
+
+          <details style="margin-bottom:8px">
+            <summary style="cursor:pointer;color:#e6eef6">¿Trabajan fuera de San Martín / Junín?</summary>
+            <div style="margin-top:8px;color:#9fb0bf">Sí. Viajamos a campo / cerro / ruta si vale la pena la instalación.</div>
+          </details>
+
+          <details style="margin-bottom:8px">
+            <summary style="cursor:pointer;color:#e6eef6">¿Me dejan todo con clave segura?</summary>
+            <div style="margin-top:8px;color:#9fb0bf">Sí. Te damos un PDF con las contraseñas y los pasos básicos.</div>
+          </details>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso">
+      <div class="section-title container">
+        <h2>Así trabajamos</h2>
+        <p>Simple y sin letra chica.</p>
+      </div>
+
+      <div class="container steps-grid" style="margin-top:18px">
+        <div class="step-card">
+          <div class="step-num">PASO 1</div>
+          <div style="font-weight:700;color:#fff;margin-bottom:8px">Nos contás tu problema</div>
+          <div class="muted small">“Tengo 8 cabañas y en 3 no hay wifi”, “En la escuela no entra señal”… contanos así, directo.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">PASO 2</div>
+          <div style="font-weight:700;color:#fff;margin-bottom:8px">Vamos al lugar</div>
+          <div class="muted small">Medimos señal, vemos tomas de corriente, techos, paredes, distancias.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">PASO 3</div>
+          <div style="font-weight:700;color:#fff;margin-bottom:8px">Instalamos y probamos</div>
+          <div class="muted small">Dejamos todo andando y hacemos un test de velocidad con vos ahi.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">PASO 4</div>
+          <div style="font-weight:700;color:#fff;margin-bottom:8px">Soporte</div>
+          <div class="muted small">¿Se cayó algo? Nos escribís directo, sin pasar por 20 operadores.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" style="background:linear-gradient(180deg,rgba(8,10,12,0.5),rgba(6,7,9,0.5))">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2 style="font-size:22px;color:#fff;margin-bottom:8px">Pedí tu visita técnica</h2>
+          <p class="muted small" style="margin-bottom:12px">Mandanos un mensaje y contanos rápido qué necesitás. Te respondemos y coordinamos.</p>
+
+          <ul>
+            <li>
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div style="font-weight:700;color:#fff">Zona</div>
+                <div class="muted small">San Martín de los Andes · Junín · alrededores y rural</div>
+              </div>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <div style="font-weight:700;color:#fff">Teléfono / WhatsApp</div>
+                <div id="phoneDisplay" class="muted small">+54 9 ___ ___ ____  <!-- completá tu número aquí --></div>
+              </div>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div style="font-weight:700;color:#fff">Disponibilidad</div>
+                <div class="muted small">Urgencias conectividad <strong style="color:#06b6d4">24/7</strong> (sin promesa de respuesta instantánea).</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- FORM -->
+        <div class="card" style="padding:18px">
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" placeholder="Ej: Carlos / Cabañas Las Lengas" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Teléfono o WhatsApp</label>
+              <input id="phone" name="phone" type="text" placeholder="+54 9 ..." required>
+            </div>
+
+            <div class="field">
+              <label for="msg">Qué necesitás</label>
+              <textarea id="msg" name="msg" placeholder="Ej: Tengo 6 cabañas. En 2 el wifi es pésimo. Quiero cámaras y Starlink si se puede." required></textarea>
+            </div>
+
+            <button class="btn-primary" type="submit"><i class="fa-solid fa-paper-plane" style="margin-right:8px"></i> Enviar consulta</button>
+
+            <div id="formStatus" class="form-status">Te respondemos por WhatsApp.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div style="font-weight:700;color:#fff">link-sma</div>
+        <div class="muted small">Internet. Redes. Seguridad.</div>
+        <div class="muted small">San Martín de los Andes · Patagonia</div>
+      </div>
+
+      <div class="muted small">© <span id="year"></span> link-sma. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
   <script>
-    // Seleccionar elementos
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    // --- Animación numérica "viva" del test de velocidad ---
+    (function(){
+      const speedEl = document.getElementById("speedNumber");
+      const pingEl = document.getElementById("pingNumber");
+      if(!speedEl || !pingEl) return;
+      let baseSpeed = 145;
+      let basePing = 28;
 
-    // Agregar evento para mostrar/ocultar menú
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-active');
-    });
+      setInterval(() => {
+        const jitterSpeed = baseSpeed + (Math.random() * 6 - 3); // +-3
+        const jitterPing = basePing + (Math.random() * 4 - 2);   // +-2
+        speedEl.textContent = Math.round(jitterSpeed);
+        pingEl.textContent = Math.round(jitterPing);
+      }, 1500);
+    })();
 
+    // --- Formulario: guardado local + validación mínima ---
+    (function(){
+      const form = document.getElementById("contactForm");
+      const statusEl = document.getElementById("formStatus");
+      const phoneDisplay = document.getElementById("phoneDisplay");
+
+      // Si querés poner tu n° visible por defecto: cambialo acá
+      const TU_TELEFONO = ""; // Ej: "+54 9 299 123 4567"
+      if(TU_TELEFONO) phoneDisplay.textContent = TU_TELEFONO;
+
+      if(!form || !statusEl) return;
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = form.name.value.trim();
+        const phone = form.phone.value.trim();
+        const msg = form.msg.value.trim();
+
+        if(!name || !phone || !msg){
+          statusEl.textContent = "Por favor completá todos los campos.";
+          statusEl.style.color = "#ff7b7b";
+          return;
+        }
+
+        const leadData = { name, phone, msg, ts: Date.now() };
+        // guardamos localmente (puede extenderse a backend / Google Sheets / WhatsApp API)
+        try {
+          localStorage.setItem("link-sma-lead", JSON.stringify(leadData));
+        } catch(e){
+          console.warn("No se pudo guardar en localStorage", e);
+        }
+
+        statusEl.textContent = "Listo. Guardado. Te respondemos al WhatsApp que dejaste.";
+        statusEl.style.color = "#06b6d4";
+
+        // Opcional: abrir WhatsApp web con mensaje prellenado (comenta si no querés)
+        // const wa = `https://wa.me/${phone.replace(/\\D/g,'')}?text=${encodeURIComponent("Hola, les escribo desde el sitio. " + msg)}`;
+        // window.open(wa,'_blank');
+
+        form.reset();
+      });
+    })();
+
+    // Año dinámico footer
+    (function(){ const y = new Date().getFullYear(); document.getElementById("year").textContent = y })();
   </script>
 </body>
-
 </html>
